@@ -1,0 +1,2885 @@
+WEBVTT
+
+00:00.000 --> 00:13.680
+I'll just start it with the project hello everyone yeah can you hear us we
+
+00:13.680 --> 00:32.220
+know yeah it's fine thank you good morning good afternoon everyone I'll be
+
+00:32.220 --> 00:40.380
+sharing the details you know about how we are starting well now then big you
+
+00:40.380 --> 00:43.540
+know then alive and that's great I'll also you know
+
+00:43.540 --> 00:48.940
+focus on how we start in you know some of the pieces which we take care before
+
+00:48.940 --> 00:56.200
+the Excel analyze and then how we pick off the analyze and update using manual
+
+00:56.200 --> 01:05.800
+method also using some of this so we have couple of constraints which I just
+
+01:05.800 --> 01:12.440
+share the link and the details are mentioned there but again some of the
+
+01:12.440 --> 01:13.520
+process you
+
+01:13.520 --> 01:20.060
+you know it will get things out anymore decision she but again бытьwind metiful
+
+01:20.060 --> 01:22.520
+know so
+
+01:24.600 --> 01:31.200
+two things first things which we are doing is we are going to upgrade this
+
+01:31.200 --> 01:39.460
+time while cell and devices to the 19.2 version so it is this data image version
+
+01:39.460 --> 01:43.340
+of your 19.2 few months and one or two months later we will be�
+
+01:43.340 --> 01:43.520
+uh t outra...
+
+01:43.520 --> 01:50.880
+back we did another play to twelve point dot dot eight but again we need to
+
+01:50.880 --> 02:01.280
+upgrade and tell and dv4 I just know it's going on I have two three servers
+
+02:01.280 --> 02:09.140
+to say if I have it so you know what all commands we do what all pieces we run
+
+02:09.140 --> 02:16.700
+for that the first thing which we do is we take the item of time I know what
+
+02:16.700 --> 02:23.920
+time should be you know less than 30 days otherwise our analyze will fail so
+
+02:23.920 --> 02:30.080
+in in this case suppose for the best practice we usually run humanized at
+
+02:30.080 --> 02:37.280
+least one week in advance so let's consider you know our island of 10 is 25
+
+02:37.280 --> 02:39.140
+days now and
+
+02:39.140 --> 02:44.600
+our upgrade is going to be scheduled in the next week so by the next week I know
+
+02:44.600 --> 02:49.960
+of time will be you know more than 30 days so in those cases if you see you
+
+02:49.960 --> 02:55.800
+know on an average item of time is more than 30 20 days you may reset dial ohm
+
+02:55.800 --> 03:01.040
+not a problem but if you're still sure like you know you'll be a plane tomorrow
+
+03:01.040 --> 03:09.080
+day after tomorrow not needed so I am NOT visiting the I know no as you know
+
+03:09.080 --> 03:13.560
+the commands are mentioned here it will be working fine not a problem the first
+
+03:13.560 --> 03:19.200
+thing is here we can see up time and then the second one is it will reset
+
+03:19.200 --> 03:26.360
+dialogue once I don't reset is done we can you know again take the off time but
+
+03:26.360 --> 03:33.440
+some of the situations here like I'll just show you on my screen here we see
+
+03:33.440 --> 03:38.540
+the I know much that is not working so this is what I have learned now like for
+
+03:38.540 --> 03:48.440
+example you know most of the server systems dial on it is let's let's not
+
+03:48.440 --> 03:59.240
+highlight the thing where it's not working go with the ideal so another
+
+03:59.240 --> 04:06.780
+command is to take the so faulty which will start false mention you know in this
+
+04:06.780 --> 04:08.540
+you know then I know
+
+04:08.540 --> 04:16.260
+except the disk thing the next command will need to take the physical disk
+
+04:16.260 --> 04:22.560
+status for the cell and the DB as well so it will see whether you know this is
+
+04:22.560 --> 04:30.640
+in the normal or the failed status or in any other like in the predictive failure
+
+04:30.640 --> 04:38.440
+for the physical disk also we can see whether it is you know particularly failed or not
+
+04:38.540 --> 04:51.500
+and this one is also important sometime you know we might not get into faulty or in the
+
+04:51.500 --> 04:58.600
+disk but this tech hardware profile will list out all hardware faulty using this
+
+04:58.600 --> 05:08.260
+command okay one of the best practice also we follow is we take the alert history in some cases you'll see
+
+05:08.540 --> 05:14.540
+there there are alert history but even though it is already cleared and not cleared I mean
+
+05:14.540 --> 05:20.000
+the actual error is fixed that we need to see whether it is really fixed or not that
+
+05:20.000 --> 05:28.100
+you can get it in hardware tech profile or any other this is also important to
+
+05:28.100 --> 05:33.220
+take the critical error in the alert history so this is this command will give you the
+
+05:33.220 --> 05:38.420
+critical alert history if at all you need to drop the alert history
+
+05:38.540 --> 05:45.360
+in case the fix has been applied and you're still seeing the alert history please drop
+
+05:45.360 --> 05:53.360
+this using this one okay recently we encountered one bug where you know if there is a you know
+
+05:53.360 --> 06:01.240
+this is 8 terabytes or 10 terabytes we were asked not to you can skip this one abhimanyu
+
+06:01.240 --> 06:08.540
+it's not applied to the 19.2.3 version okay fine so similar pretext is for the alert history
+
+06:08.540 --> 06:12.400
+yeah and so you can check just line of top last time here it is 90� 01 00 which we
+
+06:12.400 --> 06:12.460
+don't like but yes i will explain to you how you can
+
+06:12.460 --> 06:18.240
+And finally to this look like total error I apologize I was doing some basting
+
+06:18.480 --> 06:24.420
+But run on over the division on Sunday so now I'll be showing you how we
+
+06:24.540 --> 06:27.720
+Apparently doing other than analyze or the being alive I'll show you both
+
+06:27.720 --> 06:38.360
+Before before abhimanyu runs the analyze I'll just brief that the process or the flow
+
+06:38.540 --> 06:44.840
+we go through so these upgrades are divided into two parts one is the pre
+
+06:44.840 --> 06:50.420
+check which we call as analyze checks second one is actual upgrade in the
+
+06:50.420 --> 06:57.120
+analyze checks it will do the analysis of both hardware and software everything
+
+06:57.120 --> 07:03.300
+that the cluster is healthy and ready for upgrade now this analyze process
+
+07:03.300 --> 07:08.020
+when we kick off it takes around one hour for each cluster so to minimize
+
+07:08.020 --> 07:12.560
+that thing that okay we can just instead of running analyze and get the hardware
+
+07:12.560 --> 07:18.160
+issues from there will be running hardware checks ourselves first which I
+
+07:18.160 --> 07:23.520
+be when you showed those commands of resetting the SP or the alert history
+
+07:23.520 --> 07:28.660
+and all that so we can check the hardware stuff in that those using those
+
+07:28.660 --> 07:33.120
+commands itself which we can do it in probably 15-20 minutes per cluster and
+
+07:33.300 --> 07:37.920
+then raise the MOS cases get the hardware fixed once the hardware is
+
+07:37.920 --> 07:43.320
+fixed then we can run the actual analyze which will actually still have those the
+
+07:43.320 --> 07:48.200
+disks issues or other hardware faults won't be coming and analyze and will be
+
+07:48.200 --> 07:52.860
+just the other issues which we highlighted but since okay the one thing
+
+07:52.860 --> 07:56.380
+is that we can use show faulty which everyone knows that using show faulty you
+
+07:56.380 --> 08:00.480
+can see the hardware issues but show faulty will never tell you the disk
+
+08:00.480 --> 08:03.120
+issues or disk issues we use those
+
+08:03.300 --> 08:07.960
+issues so after all these issues are fixed and then we run the actual
+
+08:07.960 --> 08:12.660
+analyze which is for both cell and DB this is there is called cell cli utility
+
+08:12.660 --> 08:18.000
+for the piece it's dBM cli utility if everyone you can scroll up those
+
+08:18.000 --> 08:23.600
+commands are listed everyone can see that so you can see that for basically
+
+08:23.600 --> 08:28.300
+for discs we are running different commands to get the disk issues because
+
+08:28.300 --> 08:33.000
+disk issues won't be listed in show faulty output so after these hardware
+
+08:33.300 --> 08:42.900
+analyze which abhimanyu is going to show you thank you so yes we run the analyze on the respective
+
+08:42.900 --> 08:50.740
+gdt servers and gdt as you aware it stands for the zero downtime and so you know developed by the
+
+08:50.740 --> 08:57.940
+you know you can say the software engineering team so there is a constant space for the as
+
+08:57.940 --> 09:02.180
+everyone aware where every gdt server is listed out
+
+09:05.700 --> 09:12.580
+show you okay this is one so if you search here the gdt you will get it for
+
+09:12.580 --> 09:19.380
+each color there is one more page maintained by the dba team that also i can share with me
+
+09:21.460 --> 09:26.340
+okay so i have logged into the chicago gdt server already
+
+09:27.780 --> 09:27.940
+and
+
+09:27.940 --> 09:38.180
+usually our path for the upgrade will be this one where the clm
+
+09:38.180 --> 09:44.820
+they call it the clm cli utility uh which has been you know the configured on this part
+
+09:45.540 --> 09:51.940
+okay so for the best practice uh you know as there will be multiple servers involved
+
+09:51.940 --> 09:57.780
+we should have your our own directory uh where we'll be usually you know keeping the
+
+09:57.780 --> 10:04.340
+server configuration file and the other details you can also have in that in this directory like
+
+10:04.340 --> 10:10.260
+you see here uh someone has already created the configuration file but it does not harm it's okay
+
+10:11.460 --> 10:17.780
+if you are not comfortable you can have your own uh subdirectory and then uh when the analyzing
+
+10:20.180 --> 10:27.620
+so what i'll do is i'll use this uh directory only for now and then create configuration
+
+10:27.620 --> 10:41.140
+file and uh tick off the analyze manually
+
+10:41.140 --> 10:53.140
+so
+
+10:53.140 --> 10:57.460
+how do you create the config files for each host uh sorry you missed that
+
+10:57.460 --> 10:59.000
+yes i'll just
+
+10:59.000 --> 11:05.760
+it's manual just just go into the working directory and then we just vi an empty
+
+11:06.500 --> 11:12.500
+file and put the contents in it okay so so module
+
+11:12.500 --> 11:13.380
+maybe
+
+11:13.380 --> 11:14.340
+ah
+
+11:14.340 --> 11:18.180
+i have just done you know the vi and i have basically given this
+
+11:18.180 --> 11:22.220
+question and this is the host name the primary data and this is the main
+
+11:22.220 --> 11:23.280
+code number
+
+11:25.220 --> 11:27.220
+and uh we need to have
+
+11:27.220 --> 11:27.300
+we need to have
+
+11:27.300 --> 11:27.380
+and uh we need to have
+
+11:27.380 --> 11:27.460
+and we need to have
+
+11:27.460 --> 11:36.160
+this content so the first line is the host is okay and after equal to we
+
+11:36.160 --> 11:40.780
+should have the excel host name which for which the cell upgrade you know we
+
+11:40.780 --> 11:49.000
+are going to perform so we have a you know recommendation to use only one host
+
+11:49.000 --> 11:55.720
+primary DB node name for you know each configuration as it will help us you
+
+11:55.720 --> 12:00.840
+know just to view and monitor our upgrade but if somebody is comfortable
+
+12:00.840 --> 12:08.600
+they can have the more host also here in you know the coma separator value so so
+
+12:08.600 --> 12:13.300
+what abhimanyu saying that we can kick off analyze using one configuration file
+
+12:13.300 --> 12:18.080
+on multiple clusters also so but recommendation is that we put only one
+
+12:18.080 --> 12:23.200
+cluster because then log will be created one file only it will be difficult for
+
+12:23.200 --> 12:25.600
+us to to troubleshoot if some failures are
+
+12:25.600 --> 12:25.680
+going to happen so that's why we are going to do that so that's why we are
+
+12:25.680 --> 12:25.720
+going to do that so that's why we are going to do that so that's why we are
+
+12:25.720 --> 12:25.840
+going to do that so that's why we are going to do that so that's why we do that
+
+12:25.840 --> 12:30.760
+the curse for both the clusters or something since it's good to use only
+
+12:30.760 --> 12:36.340
+one fine as well you can just put one cluster name only so in this case this is
+
+12:36.340 --> 12:40.300
+the cutting is there one question so p情 syndrome percent is then going to
+
+12:40.300 --> 12:46.800
+omit now well keep simple and only one time you did you know okay the second
+
+12:46.800 --> 12:53.640
+line is the path directory so now we are going to use this back to for this
+
+12:53.640 --> 12:55.520
+version as I see for the Bank so the link for go toward there is a path
+
+12:55.520 --> 12:55.680
+directory for this version as it is for the tank so it is the path directory so
+
+12:55.680 --> 13:01.360
+to you will see the cell and this is this can be anything in the profession admin but we are
+
+13:01.360 --> 13:06.880
+going to follow the standard directory where our patch is copied as it will fail and the last one
+
+13:06.880 --> 13:13.920
+is very important uh the target version so target version which we have mentioned here is the 19.2
+
+13:13.920 --> 13:22.480
+so just save this file okay so now i have the contents of the the this uh patches directory
+
+13:22.480 --> 13:32.480
+also oh yes okay so here we can see uh this is for the cell i'll show you the overall
+
+13:34.400 --> 13:40.800
+okay so overall you will see the for the db as well and then the last one let me see for the db
+
+13:42.160 --> 13:44.320
+so db you are seeing the two patches
+
+13:46.880 --> 13:52.320
+so these are just iso files in in the zip files if you guys know like manual upgrades
+
+13:52.480 --> 13:56.160
+you have done so it's the same those files which we use for manual upgrades also
+
+13:56.800 --> 14:01.920
+using patches here so it's the same thing that we don't go into all seven directory
+
+14:06.160 --> 14:14.080
+okay now uh in the configuration is ready here if you see i'll be starting the analyze for this
+
+14:16.480 --> 14:20.080
+okay i have command prepared for this
+
+14:22.480 --> 14:33.760
+uh i'll be manual can you just uh go back to the previous um uh the config file screen
+
+14:34.640 --> 14:41.680
+because um in in the host in the host list uh you mentioned that it is for the db note isn't it
+
+14:41.680 --> 14:45.840
+it is for cf cldx0013 right
+
+14:47.600 --> 14:52.320
+directory you specify it's for cell but it is for the db note isn't it
+
+14:53.040 --> 15:00.640
+uh let's see uh hold on a minute so uh frankie if you have done any celebrating the celebration
+
+15:00.640 --> 15:07.440
+from the db node only it's not directly kicked off on any cellular all all the all the celebrates
+
+15:07.440 --> 15:13.920
+are to be kicked off from primary db node from a db yep there is such equivalent setup for all
+
+15:13.920 --> 15:22.480
+cells and okay picked up so that the host list is referred to the uh the analyze on the uh issue bd
+
+15:22.480 --> 15:27.200
+the cell no isn't it because we're doing the cell right because the patch directory is for the cell
+
+15:28.480 --> 15:34.560
+no it's not that it's it's uh we are putting the host as a primary db node from where the
+
+15:34.560 --> 15:42.560
+cell upgrade will be kicked off yeah or how we will be telling that it's going to be cell upgrade
+
+15:42.560 --> 15:47.520
+you will not come to know once we kick off the command it will be for sure that's how it will
+
+15:47.520 --> 15:54.000
+be kicked off so all right in addition to what pinak said uh basically the patch manager is you
+
+15:54.000 --> 15:59.600
+know the process which actually upgrades the cell and the db which basically runs on the primary db
+
+15:59.600 --> 16:15.040
+node okay so next command will give you the clear picture frankie okay okay i have command ready
+
+16:17.520 --> 16:25.200
+to run the db uh okay i'll see uh what all clicks it is uh as this is the path for the clm cli okay
+
+16:26.320 --> 16:30.320
+so basically this is nothing but you know my current working direction
+
+16:32.880 --> 16:38.800
+and the second i'm not sure have you mentioned that this is being run as mc user
+
+16:41.520 --> 16:44.960
+no i did not mention but this is mandatory to run it as mc
+
+16:46.080 --> 16:46.480
+login
+
+16:47.520 --> 16:56.560
+become mc user yes thank you and uh as this is you know you will see here the difference between
+
+16:56.560 --> 17:03.440
+analyze and update so for analyze this is mandatory and analyze if you skip this analyze
+
+17:04.160 --> 17:10.720
+it will basically upgrade it okay so we need to be very careful uh for the you know analyze and
+
+17:10.720 --> 17:17.120
+update so and then hyphen hyphen analyze it should be rest all so before you can even analyze this
+
+17:18.160 --> 17:24.640
+you want to remember that the upgrade needs to be written which you have written clm cli upgrade
+
+17:26.480 --> 17:31.920
+yes yes okay okay otherwise you know this what i have done is i have given the full path
+
+17:32.560 --> 17:38.720
+so here you can omit the full part also we can also use dot clm like this
+
+17:39.520 --> 17:44.320
+okay but as we will be working on from the other directory or sub directory then full path we need
+
+17:44.320 --> 17:47.360
+to mention it on so that's why i have mentioned there
+
+17:47.520 --> 17:55.820
+okay so then as this is for the cell node so here we are mentioning this cell
+
+17:55.820 --> 17:59.640
+typically for this is here the difference would be whether we are
+
+17:59.640 --> 18:11.140
+running for cell or database okay again this is next one is the config file
+
+18:11.140 --> 18:15.580
+hyphen-hyphen config file is in the path of the country file here this is
+
+18:15.580 --> 18:20.380
+mandatory to give the you know the full path you mean we have to give the
+
+18:20.380 --> 18:25.780
+produce path yes otherwise it's not going to you know take if you feel you
+
+18:25.780 --> 18:30.340
+are in your current directly anywhere and it will not take it on so there is a
+
+18:30.340 --> 18:38.560
+dependency this is how this has been developed okay next one is the request
+
+18:38.560 --> 18:43.540
+name so each you know analyze and upgrade will have the unique name and it
+
+18:43.540 --> 18:45.580
+can be maximum of 20 characters
+
+18:45.580 --> 18:54.880
+okay for the simplicity you know I have put a just for the analyze and then the
+
+18:54.880 --> 18:59.800
+host name and the version you know suppose sometime you will run like in a
+
+18:59.800 --> 19:05.400
+two times or three times so suppose I'm running for the first occurrence and I
+
+19:05.400 --> 19:10.060
+have used the one you can use your own you know the sort name or whatever it's
+
+19:10.060 --> 19:14.920
+fine but it has to be in itself this will not submit your you know the job
+
+19:15.580 --> 19:28.180
+I am just running now tell analysis it will take two three minutes usually to
+
+19:28.180 --> 19:32.680
+get the request ID see here you are think checking if this name is unique or
+
+19:32.680 --> 19:36.220
+not like like this it will take whether
+
+19:36.220 --> 19:41.240
+configuration file is proper or not and also it will show you workflows for the
+
+19:41.240 --> 19:45.560
+family if you you know notice like something went wrong you can
+
+19:45.580 --> 19:54.700
+to you know again interrupt this process fine now i have uh some request id uh which i already ran
+
+19:55.340 --> 20:00.860
+uh i'll show you uh you know how the actual uh when we get the request
+
+20:00.860 --> 20:04.300
+ready how it looks like and how we can you know monitor it
+
+20:07.340 --> 20:07.840
+okay
+
+20:10.220 --> 20:15.180
+so now i have logged in here in one of the you know the netherlands gbt server
+
+20:15.820 --> 20:18.060
+and again i am in the mc admin user
+
+20:37.020 --> 20:38.540
+so any questions so far guys
+
+20:43.420 --> 20:43.900
+it's okay
+
+20:45.580 --> 20:53.580
+no one has any questions
+
+20:53.580 --> 20:59.580
+no one has any questions
+
+21:11.820 --> 21:14.620
+if something has come okay
+
+21:15.580 --> 21:17.580
+no one has any questions
+
+21:17.580 --> 21:19.580
+no one has any questions
+
+21:19.580 --> 21:21.580
+so
+
+21:21.580 --> 21:23.580
+so
+
+21:23.580 --> 21:25.580
+so
+
+21:25.580 --> 21:27.580
+so
+
+21:27.580 --> 21:29.580
+so
+
+21:29.580 --> 21:31.580
+so
+
+21:31.580 --> 21:33.580
+so
+
+21:33.580 --> 21:35.580
+so
+
+21:35.580 --> 21:37.580
+so
+
+21:37.580 --> 21:39.580
+so
+
+21:39.580 --> 21:41.580
+so
+
+21:41.580 --> 21:43.580
+so
+
+21:43.580 --> 21:45.580
+so
+
+21:45.580 --> 22:03.260
+so so
+
+22:03.260 --> 22:05.580
+so
+
+22:05.580 --> 22:09.500
+so
+
+22:09.500 --> 22:09.920
+so
+
+22:09.920 --> 22:10.700
+um
+
+22:10.700 --> 22:10.880
+um
+
+22:10.880 --> 22:10.940
+so
+
+22:10.940 --> 22:11.520
+so
+
+22:11.520 --> 22:11.780
+um
+
+22:11.780 --> 22:13.400
+um
+
+22:13.400 --> 22:13.680
+and
+
+22:13.680 --> 22:13.920
+uh
+
+22:13.920 --> 22:14.280
+yeah
+
+22:14.280 --> 22:15.580
+i saw
+
+22:15.580 --> 22:23.500
+they were yeah there was some email or thing as well some forum anyway uh so what i'll do is
+
+22:24.380 --> 22:29.420
+has kicked off upgrades right in chicago so it should have been working yes it should have been
+
+22:29.420 --> 22:34.540
+working but uh we'll take with receipts you know it has interrupted his own job or not
+
+22:36.780 --> 22:42.380
+anyway i have some previous uh you know request id which i'll show you the only difference here
+
+22:42.380 --> 22:49.420
+is you'll get the request id okay so i i'll show you how the request id and how many digits it does
+
+22:49.420 --> 23:07.180
+have okay you will get the request id here you see the digits right so it will start with one five
+
+23:07.180 --> 23:12.300
+and it will be long digits so again to monitor the progress we have
+
+23:12.380 --> 23:16.460
+to be in the bin directory and then we can run this clm cli progress
+
+23:17.020 --> 23:22.060
+and report this in and last we'll have the unique request id which we are going to monitor
+
+23:36.220 --> 23:42.140
+okay now first thing we can look whether analyze is you know
+
+23:42.380 --> 23:50.060
+whether it is completed succeeded no error okay in this case this is idle and it looks clean okay
+
+23:50.060 --> 23:57.980
+but couple of things to notice here so we see here here like it does the custom pretext for
+
+23:57.980 --> 24:04.140
+this particular cell it does the pretext and the last it does the clean up okay so all will be
+
+24:04.140 --> 24:09.500
+succeeded succeeded it will this process will continue for the each cell from that particular
+
+24:11.020 --> 24:12.220
+so you you are seeing here
+
+24:12.380 --> 24:18.220
+you know all these uh cell nodes have these three steps like custom press pretext clean out
+
+24:18.780 --> 24:24.780
+and custom pretext and all are you know again set of multiple states and combined
+
+24:28.380 --> 24:35.100
+and if we see any failure you will see here the ot alert okay in this here we can you know
+
+24:35.900 --> 24:41.340
+take it on how does it look like as there is no you know errors you are not seeing you know
+
+24:41.900 --> 24:46.860
+anything here if it so usually you will see the path where you can get it on
+
+24:48.300 --> 24:50.220
+and then see what error it has been listed
+
+24:52.700 --> 24:53.900
+any questions for this
+
+25:00.540 --> 25:08.140
+okay oh this was for the analyze uh let's consider you know our analyze is success and
+
+25:08.140 --> 25:10.860
+it says succeeded and no errors we can
+
+25:11.340 --> 25:19.180
+uh plan it for the upgrade based on again the approvals and the jira fine for the cell upgrade
+
+25:24.700 --> 25:29.500
+i'm not switching off the upgrades but i'll show you how and what is the difference here
+
+25:33.260 --> 25:35.660
+our configuration file and everything is ready
+
+25:35.660 --> 25:46.300
+uh so guys guys interrupt uh where you have any questions so yep uh pinac i have one so uh what's
+
+25:46.300 --> 25:53.820
+the duration when we success succeeded with the analyze and and before we perform the self upgrades
+
+25:53.820 --> 26:00.140
+it takes around 45 minutes to one hour to run complete analyze yeah yeah um okay but but you
+
+26:00.140 --> 26:05.020
+know because analyze would be a you know a prerequisite before we do the self upgrade right
+
+26:05.660 --> 26:10.460
+what i'm trying to say is that you know what's the safe duration right between once we have a
+
+26:10.460 --> 26:14.940
+successful analyze and you know the next time we perform the self upgrade is this
+
+26:15.580 --> 26:22.700
+one day two days or yeah we actually start the analyze one week before to fix any issues which
+
+26:22.700 --> 26:30.460
+might come up so after after so but the way things are moving it's it's really i mean all
+
+26:31.100 --> 26:35.100
+the urgent ones so we are just getting in them finished two days before or something
+
+26:35.740 --> 26:41.020
+so if if one week before also analyze pass successfully so as a best practice we will run
+
+26:41.020 --> 26:48.060
+the analyzer again two days before just to see that how things are good all right cool thanks
+
+26:50.700 --> 26:56.620
+so this is the command which i have already prepared for the actual cell upgrade only
+
+26:56.620 --> 27:02.300
+distance here is the upgrade it does not have hyphen upon analyte if you see here the previous
+
+27:02.300 --> 27:05.500
+one does have hyphen upon analyte and what the actual upgrade you can see here is what the actual
+
+27:05.660 --> 27:11.600
+does not have the highest analysis so we just need to be careful that we are
+
+27:11.600 --> 27:16.900
+actually making you know either analyze or the upgrade so similarly we will get
+
+27:16.900 --> 27:23.560
+the request ID and in same way we can you know monitor our progress how it
+
+27:23.560 --> 27:28.560
+progresses and if there will be any failure again we can look for this OT
+
+27:28.560 --> 27:35.060
+alert log mentioned in this progress report and as everyone is aware we can
+
+27:35.060 --> 27:39.560
+you know check the cell version like this image in twice and version command
+
+27:39.560 --> 27:43.840
+it will show you whether how many servers are you know upgraded and how
+
+27:43.840 --> 27:52.560
+many pendants you can see also from this report as well so what what issues
+
+27:52.560 --> 28:01.220
+normally you face during pre-checks okay so during pre-checks there could be the
+
+28:01.220 --> 28:04.300
+hardware issues mainly
+
+28:05.060 --> 28:15.460
+hardware disk then CPU DIMM or power supply so it depends what what kind of
+
+28:15.460 --> 28:22.200
+hardware we have so major issues will be like that in case of cell
+
+28:22.200 --> 28:28.820
+sometimes the i-loam connectivity issues due to maybe if you reset the i-loam
+
+28:28.820 --> 28:34.940
+it may fix and different kind of you know fixes are there but yeah overall it is there okay so you
+
+28:35.060 --> 28:42.920
+initially started with running this you know commands to find faulty parts right
+
+28:42.920 --> 28:47.840
+you know on this so after that you do this pre-check so what's the difference
+
+28:47.840 --> 28:51.200
+it is just the orchestration to run across different nodes at one go or what
+
+28:51.200 --> 28:57.800
+is it yeah that's correct you know we can run and go and but it does have the
+
+28:57.800 --> 29:05.060
+additional you know command for the excel update like you know set of you know the
+
+29:05.060 --> 29:10.280
+multiple pre-tests not only hardware but it does have the software test also
+
+29:10.280 --> 29:16.460
+let's consider if you have RPM dependencies it needs to be removed so those kind of
+
+29:16.460 --> 29:26.640
+situations and it has multiple things to do okay got it so guys if cell analyze is
+
+29:26.640 --> 29:34.180
+clear I'll go ahead with how we you know do the DB analyze manually is this fine
+
+29:34.180 --> 29:34.200
+so guys if cell analyze is clear I'll go ahead with how we you know do the DB analyze manually is this fine
+
+29:35.060 --> 29:48.340
+yeah yeah you asking to run DB analyze I can so it is fine yeah we can run one
+
+29:48.340 --> 29:52.680
+cell analyzing some other side if Chicago one is not working but anyways
+
+29:52.680 --> 29:58.480
+I have asked finish team to to check on the Tomcat so let me first and so the
+
+29:58.480 --> 30:04.180
+DB analyze and will see if mean where it gets fixed or something okay DB analyze yeah DB analyze is fine
+
+30:04.180 --> 30:06.420
+Yeah, DBanalyze will take more time, right?
+
+30:06.420 --> 30:08.420
+Sanalyze is a more easy one.
+
+30:08.420 --> 30:14.040
+Anyway, it will, you know, kick off the job and I have previous Sanalyze ID so I can show
+
+30:14.040 --> 30:17.040
+you how it works.
+
+30:17.040 --> 30:18.040
+Okay.
+
+30:18.040 --> 30:28.580
+For a similar way as I have shown above for the DBanalyze, we do the...
+
+30:28.580 --> 30:30.680
+So one other thing, one other thing.
+
+30:30.680 --> 30:36.440
+So for 19.2.3 upgrade, there has to be some minimum version for grid, right?
+
+30:36.440 --> 30:38.680
+I think 12.2 or something like that.
+
+30:38.680 --> 30:39.680
+Yeah.
+
+30:39.680 --> 30:40.680
+12.2.
+
+30:40.680 --> 30:41.680
+12.2.
+
+30:41.680 --> 30:42.680
+Yeah.
+
+30:42.680 --> 30:43.680
+12.2.
+
+30:43.680 --> 30:45.680
+So is that validated during pre-checks?
+
+30:45.680 --> 30:46.680
+Yes.
+
+30:46.680 --> 30:47.680
+Yes.
+
+30:47.680 --> 30:51.680
+DBanalyze checks will error out if it's lower than 12.2.
+
+30:51.680 --> 30:52.680
+Okay.
+
+30:52.680 --> 30:53.680
+Okay.
+
+30:53.680 --> 30:54.680
+Okay.
+
+30:54.680 --> 30:55.680
+Thanks.
+
+30:55.680 --> 30:58.680
+And we have already upgraded these servers to 12.2.
+
+30:58.680 --> 30:59.680
+Okay.
+
+30:59.680 --> 31:00.680
+Okay.
+
+31:00.680 --> 31:01.680
+Thanks.
+
+31:01.680 --> 31:02.680
+Thanks.
+
+31:02.680 --> 31:07.680
+So for the DBanalyze itself, we have this DBNode features which I was talking earlier.
+
+31:07.680 --> 31:17.680
+Coming to how we actually run the DBanalyze, similarly we create a configuration file from
+
+31:17.680 --> 31:22.340
+the respective DDT server.
+
+31:22.340 --> 31:23.680
+Okay.
+
+31:23.680 --> 31:28.440
+So we have these three configuration files.
+
+31:28.440 --> 31:29.440
+Okay.
+
+31:29.440 --> 31:30.440
+Okay.
+
+31:30.440 --> 31:44.560
+okay there is a difference here uh if you see here the couple of extra lines are here
+
+31:44.560 --> 31:52.380
+okay so the difference start with the first one we have to put both the nodes of the cluster
+
+31:52.380 --> 32:00.460
+for db analysis right uh you're right and uh for two node cluster if you put just uh
+
+32:00.460 --> 32:06.540
+one node also it's fine but if it is a multiple then you have to uh add all nodes but in case
+
+32:06.540 --> 32:18.660
+of 12 node cluster are we putting all the yes please put all nodes for the best practices
+
+32:18.660 --> 32:22.360
+okay so no not not the odd ones or you mean
+
+32:22.360 --> 32:27.980
+all the nodes uh odd ones also will work but you know it is a tedious job to you know
+
+32:27.980 --> 32:33.980
+find out all odd nodes and then you know um put in the configuration so but uh as it is
+
+32:33.980 --> 32:38.940
+very easy to you know put all nodes together so i i'll say please put all nodes together
+
+32:38.940 --> 32:48.180
+not only the order it will not create any impact
+
+32:48.180 --> 32:51.860
+but when you say odd node are you talking about the primary node
+
+32:51.860 --> 32:52.340
+no
+
+32:52.340 --> 33:02.020
+Let's consider we have a 12 node in one cluster, so 1, 3, 5, 7, so what GDT consider is like
+
+33:02.020 --> 33:10.100
+all nodes is a primary DB node for them, for the GDT.
+
+33:10.100 --> 33:16.180
+Just to say more on the 12 node cluster thing, from the hardware point of view, it will look
+
+33:16.180 --> 33:23.080
+like it's just one rack, but it's logically split into multiple clusters of two node each.
+
+33:23.080 --> 33:28.140
+Like in 12 node cluster, when we say 12 node cluster, that means there are 12 XRata DB
+
+33:28.140 --> 33:33.620
+nodes in that rack, just single rack, which would mean that they are all logically split
+
+33:33.620 --> 33:36.440
+into six clusters of two node each.
+
+33:36.440 --> 33:40.600
+That's how the fusion architecture is.
+
+33:40.600 --> 33:44.420
+So then we will put all the nodes in that.
+
+33:44.420 --> 33:46.180
+Is it dependent on like, you know,
+
+33:46.180 --> 33:52.140
+the XRata shapes, like in half rack, full rack and all?
+
+33:52.140 --> 34:00.040
+In fusion, it's all full racks, there is no exception on that, it's all full racks.
+
+34:00.040 --> 34:06.120
+It's only in EM and IDM, we have quarter and half racks.
+
+34:06.120 --> 34:07.120
+Okay, got it.
+
+34:07.120 --> 34:15.960
+Okay, so again, the first, the host is on the DB node, and then the pack direct to the target
+
+34:16.180 --> 34:17.180
+node.
+
+34:17.180 --> 34:22.180
+The tracking bug is not mandatory, but again, let's have it, but we don't have any bugs
+
+34:22.180 --> 34:23.180
+this time.
+
+34:23.180 --> 34:24.180
+Okay.
+
+34:24.180 --> 34:31.340
+Then this is mandatory, pod suffix is equal to hyper MC, and then pod underscore failure
+
+34:31.340 --> 34:34.820
+thread, underscore threshold is equal to one.
+
+34:34.820 --> 34:40.140
+So this is, these three lines are addition to the, which we used to put in the cell.
+
+34:40.140 --> 34:41.140
+Okay.
+
+34:41.140 --> 34:46.140
+So this is the key difference in the DB node configuration and the cell node configuration.
+
+34:46.180 --> 34:47.180
+Okay.
+
+34:47.180 --> 34:50.180
+I'll just save it.
+
+34:50.180 --> 34:51.180
+Okay.
+
+34:51.180 --> 34:59.680
+So I have prepared the command for a DB node and I'll, okay, one more thing.
+
+34:59.680 --> 35:07.180
+The difference here is we also need when a script here is listed, add pod in this one.
+
+35:07.180 --> 35:08.180
+Okay.
+
+35:08.180 --> 35:14.180
+So what it does is it, you know, fusion team maintains the all pod information.
+
+35:14.180 --> 35:15.180
+Okay.
+
+35:15.180 --> 35:21.180
+It's associated with each DB node in one centralized location in a session admin.
+
+35:21.180 --> 35:28.180
+From there, it copies the pod information for that particular data node to the locally.
+
+35:28.180 --> 35:32.180
+Basically that local file will use for the upgrade purpose.
+
+35:32.180 --> 35:37.180
+So basically it uses like, you know, which database server is having what pod, because
+
+35:37.180 --> 35:41.180
+as you know, the automatic failover of the service happened.
+
+35:41.180 --> 35:44.180
+So it picks the, you know, the pod information from there as well.
+
+35:44.180 --> 35:49.180
+And then matches and do their calculations for that.
+
+35:49.180 --> 35:50.180
+Okay.
+
+35:50.180 --> 35:53.180
+So how we run this add pod into the test.
+
+35:53.180 --> 35:55.180
+It's very simple.
+
+35:55.180 --> 36:04.180
+It's just, you know, just mention, you know, all database nodes.
+
+36:04.180 --> 36:07.180
+So this script and this will go much separated.
+
+36:07.180 --> 36:12.180
+The CDN, we have to put it there.
+
+36:12.180 --> 36:13.180
+Okay.
+
+36:13.180 --> 36:18.180
+So it will just show you how this, you know, how many pods has been added, how many it
+
+36:18.180 --> 36:19.180
+has removed.
+
+36:19.180 --> 36:24.180
+Suppose there are some internal ports and all it will remove it.
+
+36:24.180 --> 36:25.180
+Yes.
+
+36:25.180 --> 36:30.180
+So the reason being why we adding is we need to have only the active ports listed into
+
+36:30.180 --> 36:37.180
+this so that the services can be failed over or stopped based on the active ports only.
+
+36:37.180 --> 36:41.180
+Because as we know that this is going to be all zero downtime.
+
+36:41.180 --> 36:42.180
+So we need to be sure that.
+
+36:42.180 --> 36:47.180
+Only the active ports are being running on these database nodes.
+
+36:47.180 --> 36:54.180
+That's the reason we running this script.
+
+36:54.180 --> 37:03.180
+If you don't do then our upgrade will not happen.
+
+37:03.180 --> 37:06.180
+And you can see here, it is copying, you know, the pod information from the backup and to
+
+37:06.180 --> 37:07.180
+the current one.
+
+37:07.180 --> 37:08.180
+So this is what it is.
+
+37:08.180 --> 37:09.180
+You can just list out the contents of this file.
+
+37:09.180 --> 37:10.180
+Just put it there.
+
+37:10.180 --> 37:11.180
+Okay.
+
+37:11.180 --> 37:25.180
+First name is the pod name and then the instance name and the node name.
+
+37:25.180 --> 37:33.180
+So this is the way it's listed there.
+
+37:33.180 --> 37:34.180
+Okay.
+
+37:34.180 --> 37:38.180
+Now the next, the DB node analysis.
+
+37:38.180 --> 37:40.180
+Tomcat is started now.
+
+37:40.180 --> 37:57.060
+so you can probably analyze for cell or database for this the key difference
+
+37:57.060 --> 38:03.220
+here is only defensive here the DB node if you see my screen here you for the
+
+38:03.220 --> 38:10.600
+value is to sell and here is DB node not DB but DB node okay rest all things are
+
+38:10.600 --> 38:20.860
+same okay again this name has to be unique so I'm just putting this now your
+
+38:20.860 --> 38:27.160
+request name can be anything as per your this thing is to identify your this is
+
+38:27.160 --> 38:32.200
+for the analyze for hyphenation analyzes you know carefully
+
+38:33.220 --> 38:47.380
+okay again this is taking the so apparently how this looks like so we
+
+38:47.380 --> 38:53.040
+were talking about we need to switch to the empty and this for admin user
+
+38:57.340 --> 39:02.220
+okay this is the full part where we
+
+39:03.220 --> 39:07.720
+can see these details mean what else will you how you can
+
+39:07.720 --> 39:08.540
+monitor I want
+
+39:08.540 --> 39:15.880
+to show a Engineeringto you how he said your request which will I see in the
+
+39:15.880 --> 39:21.680
+panel as well three for the request if this is which be in the system
+
+39:22.140 --> 39:26.140
+the какойs- assisting with me
+
+39:27.340 --> 39:31.300
+we kind of stack his with the click engines
+
+39:31.300 --> 39:31.980
+million how each one you feel oh you can monitor analyze say you got the request
+
+39:31.980 --> 39:32.220
+ID in the analyze command you showed that dense on the previous year let's wait for it should beами oh yeah I mean though yeah I mean the details urban banter is required
+
+39:32.220 --> 39:47.220
+Those are the details, you see here like NFS latency and all, sometimes if fsnadmin is slow or some other issues, you will see delay to get the request added but usually 5 minutes should be the max.
+
+39:47.220 --> 39:57.220
+It's heavily dependent on fsnadmin so everything is running out of there so the fsnadmin has to be healthy to run these things.
+
+39:57.220 --> 40:06.220
+You see here, this analyze is equal to true, right? So for upgrade you will see here the upgrade one.
+
+40:06.220 --> 40:15.220
+And it will also show you the log file while generating the request id.
+
+40:15.220 --> 40:25.220
+So if at all you see any issues during, you know, you are not getting the request id, you can have a look on this log file mention in the log file bar.
+
+40:25.220 --> 40:27.220
+Yes.
+
+40:27.220 --> 40:29.220
+The workflow here is the dbnode.
+
+40:29.220 --> 40:36.220
+It looks like, you know, there is some active job running for this.
+
+40:36.220 --> 40:42.220
+You ran multiple runs for the same?
+
+40:42.220 --> 40:45.220
+Maybe since from morning it is running on.
+
+40:45.220 --> 40:50.220
+But again, this has given us the request id which was running on.
+
+40:50.220 --> 40:57.220
+Okay, yeah, so in case there are duplicate ones, it will show you which request id is already running.
+
+40:57.220 --> 41:00.220
+So here you can see we got the request id.
+
+41:00.220 --> 41:01.220
+Yes.
+
+41:01.220 --> 41:16.220
+So let me just show you how we can monitor this.
+
+41:16.220 --> 41:24.220
+So actually from the notepad, sorry, wordpad, this hyphen hyphens comes, that's why.
+
+41:24.220 --> 41:25.220
+Yeah.
+
+41:25.220 --> 41:26.220
+Yeah.
+
+41:26.220 --> 41:29.220
+Okay.
+
+41:29.220 --> 41:35.220
+So here, this is running the analyze.
+
+41:35.220 --> 41:36.220
+From top?
+
+41:36.220 --> 41:39.220
+Yes.
+
+41:39.220 --> 41:41.220
+Okay.
+
+41:41.220 --> 41:49.220
+So again, this is the log file part when the request id.
+
+41:49.220 --> 41:52.220
+And we see here the status.
+
+41:52.220 --> 41:54.220
+This is running on.
+
+41:54.220 --> 41:59.960
+this is also listed your request ID in the unique name if you have given when
+
+41:59.960 --> 42:06.120
+it start time so once it's finished you will get the end time also there as of
+
+42:06.120 --> 42:16.460
+now itself so so the analyzer is running on all cells as you can see in the
+
+42:16.460 --> 42:29.800
+source output yes and also we can see here in the job one so this has not given a
+
+42:29.800 --> 42:36.000
+appointment and again we can always go to the first
+
+42:36.000 --> 42:44.260
+forgotten viruses happening here so there are two log log files which are important
+
+42:44.260 --> 42:45.680
+one is this alert lock
+
+42:45.680 --> 42:46.440
+each value pratik
+
+42:46.440 --> 42:53.240
+this is log directory in which or other logs will be there right yes yes so just this is one
+
+42:54.120 --> 42:59.880
+okay here we will see dialect log and this thing another will be under you know
+
+43:01.080 --> 43:03.960
+logs one will be protocol
+
+43:08.520 --> 43:12.200
+so you can verify with sop it should be there right oh yes
+
+43:12.200 --> 43:21.720
+okay so one one you know when i actually before so if you go here again the request you will see
+
+43:21.720 --> 43:30.200
+here yeah so these things will help us to uh you know check what all issues are there also if
+
+43:30.200 --> 43:36.920
+the bug team or specific marks for any log we can give it from here which file you will check on
+
+43:36.920 --> 43:41.560
+this in this time everyone so it does have you know uh
+
+43:42.280 --> 43:50.200
+under the and basically we dip it and then tar it and give it to them okay okay so yeah so when
+
+43:50.200 --> 43:57.240
+when we go to the next level of these teams cloud ops tech or sc team they will ask certain files
+
+43:57.240 --> 44:07.480
+from these directories which we provide them when we file the bug yeah okay now uh for
+
+44:11.400 --> 44:11.880
+let me
+
+44:12.200 --> 44:14.760
+run db analyst for some other cluster maybe
+
+44:20.920 --> 44:25.720
+pinac i have a question right so um you know from what i know the cell will take about
+
+44:25.720 --> 44:30.440
+two hours right for itself to be upgraded so how frequent would the fs
+
+44:30.440 --> 44:37.160
+uh scf to check uh the logs for issues it takes for one cell it takes around one hour
+
+44:39.000 --> 44:42.120
+okay so so how frequent with the scf to check
+
+44:42.200 --> 44:47.880
+write the locks for errors and so on it's i mean abhimanyu can tell because
+
+44:47.880 --> 44:52.920
+they are the ones okay for you know cell upgrade
+
+44:52.920 --> 44:57.720
+uh you know there was not many issues it's uh only you know there was a
+
+44:57.720 --> 45:02.440
+problem with the grid disk but that was for the 12.2 version okay
+
+45:02.440 --> 45:05.960
+usually uh you know half an hour will be idle
+
+45:05.960 --> 45:11.720
+uh so it will be fine half an hour should be good i think yeah
+
+45:11.720 --> 45:17.000
+for the cell okay yeah no i was just thinking you know
+
+45:17.000 --> 45:19.560
+if the s shape is be sitting on the screen and
+
+45:19.560 --> 45:23.960
+you know checking no not because
+
+45:26.440 --> 45:29.720
+okay so half an hour is is probably a good uh
+
+45:29.720 --> 45:34.200
+yes yeah okay yes but we are hoping you know this time
+
+45:34.200 --> 45:41.640
+if those known issues does not come maybe we don't have to do that frequently
+
+45:41.720 --> 45:55.720
+i will just change the whole thing here
+
+46:04.760 --> 46:09.720
+so i'm picking the another cluster here
+
+46:11.720 --> 46:13.720
+um
+
+46:13.720 --> 46:15.720
+so
+
+46:15.720 --> 46:17.720
+i'm not sure
+
+46:17.720 --> 46:19.720
+um
+
+46:19.720 --> 46:21.720
+i'm not sure
+
+46:21.720 --> 46:23.720
+um
+
+46:23.720 --> 46:25.720
+um
+
+46:25.720 --> 46:27.720
+um
+
+46:27.720 --> 46:29.720
+um
+
+46:29.720 --> 46:31.720
+um
+
+46:31.720 --> 46:33.720
+um
+
+46:33.720 --> 46:35.720
+um
+
+46:35.720 --> 46:37.720
+um
+
+46:37.720 --> 46:39.720
+um
+
+46:39.720 --> 46:41.720
+um
+
+46:41.720 --> 46:47.720
+um
+
+46:51.720 --> 46:53.720
+um
+
+46:53.720 --> 46:55.720
+um
+
+46:55.720 --> 46:57.720
+um
+
+46:57.720 --> 46:59.720
+um
+
+46:59.720 --> 47:01.720
+um
+
+47:01.720 --> 47:03.720
+um
+
+47:03.720 --> 47:05.720
+um
+
+47:05.720 --> 47:07.720
+oh
+
+47:07.720 --> 47:09.720
+oh
+
+47:09.720 --> 47:11.640
+okay you created a config in some other time yeah
+
+47:11.640 --> 47:11.720
+okay you created a config in some other time yeah um
+
+47:11.720 --> 47:25.880
+this is going to start you know the db analyze once you get the request
+
+47:28.600 --> 47:32.760
+can you check if you got the request id from the cell analyze you kicked off
+
+47:32.760 --> 47:42.520
+but
+
+47:42.520 --> 47:47.320
+we have the you know the cell analyze running on this so this is what we thought right
+
+47:48.600 --> 47:53.320
+oh yeah yeah so can we check the status yes yeah i'll take in another
+
+47:56.120 --> 48:01.800
+no in this session only you can check no uh no because we have started another one right
+
+48:02.600 --> 48:02.680
+okay
+
+48:02.760 --> 48:10.440
+okay
+
+48:19.960 --> 48:23.320
+i'm asking about that cell analytics which you picked up you're checking that one
+
+48:23.880 --> 48:24.060
+yeah
+
+48:27.320 --> 48:32.360
+yeah yes now it's uh you know it's showing still and running it will take maybe four
+
+48:32.360 --> 48:32.600
+five
+
+48:32.600 --> 48:32.740
+months
+
+48:32.760 --> 48:39.640
+but we see here everything we are seeing succeeded yeah so it's working on you know the final text
+
+48:39.640 --> 48:46.400
+maybe uh but this is pretty clean now so only changes you'll see here the completed succeeded
+
+48:46.400 --> 48:55.180
+no errors so these checks also run into three uh stages one is custom pre-checks another is
+
+48:55.180 --> 49:01.480
+pre-checks and then after it is done it will do a cleanup or whatever things they have created as
+
+49:01.480 --> 49:07.700
+you can see that it's all succeeded if at some stage it fails it then we will let know that
+
+49:07.700 --> 49:14.440
+what what stage it got failed yeah then we can go the log files alert ot logs and all those
+
+49:14.440 --> 49:20.820
+so we we have got you know the db analyze request now here so this is how it looks like
+
+49:20.820 --> 49:27.280
+this is after we analyze this is how we get this request
+
+49:27.280 --> 49:31.420
+then we can check the status
+
+49:31.480 --> 49:38.360
+so once we get the request id like uh similarly uh we can take that status but as this is very
+
+49:38.360 --> 49:44.600
+we have to give at least four five minutes to get to know the actual status but again similar way
+
+49:44.600 --> 49:51.480
+we can you know suggest it see here we have seen the running in this cell so but again once time
+
+49:51.480 --> 49:58.120
+passes it will create a table uh like view for the db node and it will not have the cell information
+
+49:58.120 --> 50:00.600
+but they'll uh db node information we'll see
+
+50:01.480 --> 50:03.480
+okay
+
+50:04.920 --> 50:13.800
+hey abby menu yeah uh if the cluster have only two uh db nodes so we can only run the one at a time
+
+50:14.440 --> 50:22.200
+isn't it that great for cells for db nodes we will put both the nodes that's what i think
+
+50:24.520 --> 50:31.480
+uh because from one of the because you um okay there's no uh db not one and maybe not two you're
+
+50:31.480 --> 50:36.760
+you need to upgrade if you need to upgrade you need to upgrade the db knock two from db not one
+
+50:36.760 --> 50:44.280
+isn't it uh yeah that will take care of it how it's gonna run that zdt will take care of it but
+
+50:44.280 --> 50:50.440
+our target is to upgrade both the nodes at the same time yeah at the same not at the same time
+
+50:50.440 --> 50:56.280
+it will be done in rolling fashion but uh okay running only one time command it will upgrade
+
+50:57.320 --> 51:00.360
+one issue one command to do both okay okay yes
+
+51:01.480 --> 51:08.200
+one of the documents you said is uh uh you upgrade uh look two from db not one and then
+
+51:08.200 --> 51:12.600
+and also the other way around as well you want to upgrade that is manual method that is manual
+
+51:13.400 --> 51:20.280
+oh okay so we don't have to now bother about you know uh like uh once one node is finished
+
+51:20.280 --> 51:24.200
+then we'll run from this you know the second node so it will automatically pick it up
+
+51:28.280 --> 51:31.400
+yeah it will bring down the instances it will check the db
+
+51:31.480 --> 51:36.280
+training and all that stuff it will then bring down those instances and then it will start the
+
+51:36.280 --> 51:42.440
+upgrade bring up the db node start the instances then go to second node bring down the services
+
+51:42.440 --> 51:46.840
+start the upgrade and bring it up and do the health checks that's everything is taken care by
+
+51:46.840 --> 51:56.120
+this okay oh that's good okay so i have a previous job id uh which we used for the db node grade
+
+51:56.120 --> 52:01.320
+basically but just to give you the overview how it looks like when we see the progress
+
+52:02.280 --> 52:10.040
+so coming from here uh it will give you the log file path request id when it has been started
+
+52:10.040 --> 52:17.320
+uh it does have in time as well and the total time how much time it took so patrick uh if you
+
+52:18.440 --> 52:23.800
+you know want to know for the db node how much it took time for this two node cluster it took
+
+52:23.800 --> 52:29.800
+around five hours for this case this is for upgrade or this is for analyze this is for the upgrade
+
+52:31.480 --> 52:37.560
+that's why i was wondering with analyze two five and a half uh no no so this is a puppy when you
+
+52:37.560 --> 52:44.120
+say five hours is uh you know um both for both both notes or one note yes both okay all right
+
+52:44.120 --> 52:49.000
+cool i think last time it used to be about six hours right yeah in the table you can see that
+
+52:49.000 --> 52:56.200
+both nodes are listed in the name to a cfcld zero zero two one one then cfcld zero zero two two all
+
+52:56.200 --> 53:00.840
+succeed so so basically uh just to give a overview uh
+
+53:02.280 --> 53:07.080
+during the upgrade also it does the pretext that's how you see here the custom pretext
+
+53:07.080 --> 53:15.320
+it says 60 days then it should have been in the order i guess uh but yeah it does the pretext okay
+
+53:16.840 --> 53:23.000
+then it does the gi pretext which is related to you know the board and instances then it does the
+
+53:23.000 --> 53:30.680
+cleanup the actual upgrade in that stage it will check the gi versions and other things uh under
+
+53:32.440 --> 53:37.400
+to answer your question okay okay and then it does the custom post text
+
+53:37.960 --> 53:45.400
+like everything is upgraded successfully so this is how uh it looks like uh
+
+53:47.240 --> 53:50.360
+and the only difference for the analysis which i'll show you in a few minutes
+
+53:50.360 --> 53:54.520
+let's you know that let the progress happen for the previous job
+
+53:54.520 --> 53:59.800
+so you will not see these things to the post you know the upgrade and the custom postage
+
+54:01.800 --> 54:15.000
+so let me see if that's okay okay okay yeah it has started uh you see here it says the custom
+
+54:15.000 --> 54:22.040
+feature it succeeded then it has started the cleanup and then it will go to the next step
+
+54:22.040 --> 54:30.680
+which is like the pretext uh okay so this is how come the upgrade for the first one is zero
+
+54:31.800 --> 54:40.040
+minute zero second for the trend 21. you mean this one up a little bit um
+
+54:40.840 --> 54:44.520
+move up a little bit there's uh there's a slap uh last time right
+
+54:46.440 --> 54:49.640
+yeah that's the upgrade on the first line is the upgrade is zero
+
+54:51.640 --> 55:00.680
+for 21. oh you mean this one yeah that's uh no move down a little bit to upgrade
+
+55:01.480 --> 55:07.160
+is zero okay i think that's the one okay i think this note was uh
+
+55:08.680 --> 55:13.640
+uh you know already upgraded uh that's that's the reason it's showing you
+
+55:15.640 --> 55:19.000
+yeah this is why i decided to skip it okay that's why you were saying
+
+55:21.640 --> 55:21.880
+okay
+
+55:23.080 --> 55:26.600
+let's start doesn't like uh add up five hours isn't it
+
+55:28.440 --> 55:31.400
+oh pretty much okay including you know the service page
+
+55:31.480 --> 55:57.720
+there are pretty many push notes you can do in the broad deve elf
+
+55:57.720 --> 55:59.480
+in the their list list
+
+55:59.480 --> 56:00.540
+right
+
+56:00.540 --> 56:06.400
+one probably one was on children exit yeah Patrick the thing is that we
+
+56:06.400 --> 56:12.120
+started on Monday or Tuesday all right right maybe this cluster got
+
+56:12.120 --> 56:17.340
+failed after upgrading one node and then ratio fixed and then we kicked off again
+
+56:17.340 --> 56:29.680
+so again so there's no problem for child X and I dot do dot X to coexist yeah it
+
+56:29.680 --> 56:35.500
+should not run for I mean for weeks or something but yeah so far we haven't
+
+56:35.500 --> 56:38.340
+seen any issues
+
+56:47.160 --> 56:52.980
+the elapsed time here for the different sections you know does not add up to the
+
+56:52.980 --> 56:56.120
+five hours right in total
+
+56:59.680 --> 57:04.880
+I have not manually calculated this but yes it adds the last time because we see
+
+57:04.880 --> 57:08.660
+here they start time and the in time I think this is the difference of the
+
+57:08.660 --> 57:15.200
+elapsed time because I'm seeing it around the three and a four hours but
+
+57:15.200 --> 57:29.060
+yeah maybe you can check later yeah I can take that okay okay so now the we
+
+57:29.060 --> 57:29.480
+have seen the analysis of the elapsed time we have seen the analysis of the
+
+57:29.480 --> 57:29.500
+the elapsed time we have seen the analysis of the elapsed time we have seen the analysis of the
+
+57:29.500 --> 57:34.220
+analyze partial right so this is how it looks like the custom pre text and the
+
+57:34.220 --> 57:38.840
+cleanup and for the both notes it will so on so here see the cleanup also done
+
+57:38.840 --> 57:44.880
+succeeded now it has moved to the next three takes it was here right in the
+
+57:44.880 --> 57:49.160
+clean up is started next you see the cleanup has been succeeded next three
+
+57:49.160 --> 57:53.760
+takes exactly so this is how it will happen for another node once the second
+
+57:53.760 --> 57:59.300
+node is done this is how the analyze will happen okay for the upgrade the
+
+57:59.300 --> 58:06.020
+the similar way only difference is uh here we will not use you know the
+
+58:06.020 --> 58:10.180
+analyze method and analyze flag we will remove this
+
+58:10.180 --> 58:16.500
+one yes same like uh for cells
+
+58:17.060 --> 58:21.540
+so this is what the difference uh and uh for the analyze and the dd9 is
+
+58:21.540 --> 58:25.300
+well and previously i was showing you how the excel upgrades was you know
+
+58:25.300 --> 58:27.380
+look like so we have seen the additional things
+
+58:27.380 --> 58:30.740
+upgraded and the system was
+
+58:31.140 --> 58:34.820
+okay any questions so far please
+
+58:39.540 --> 58:45.380
+okay fine uh hey um
+
+58:46.100 --> 58:49.940
+no i i i wanted to raise a different question not really
+
+58:49.940 --> 58:55.060
+relating to you know this zbt upgrade process right but you know
+
+58:55.060 --> 58:58.500
+i i think the one of the reason namachi's on this call is you know
+
+58:58.500 --> 59:01.540
+basically you know i i don't know whether you saw
+
+59:01.540 --> 59:06.020
+the email um that um we sent you know last night
+
+59:06.020 --> 59:09.380
+right but basically we will trying to work with raja and
+
+59:09.380 --> 59:13.780
+namachi right to look at the the em volume alert and where we can
+
+59:13.780 --> 59:18.900
+reduce right and we found out that there are two you know uh em alert one
+
+59:18.900 --> 59:22.820
+is basically far system space alert right and the
+
+59:22.820 --> 59:24.900
+other one is ntp
+
+59:25.060 --> 59:28.500
+you know sync alert and we noticed that you know um
+
+59:28.500 --> 59:32.660
+we're getting about four to five thousand right um
+
+59:32.660 --> 59:35.860
+yeah we've been completely aware of that issue for ntp
+
+59:35.860 --> 59:39.060
+reason being that ntp service has changed to
+
+59:39.060 --> 59:42.420
+you know well seven from ntp no no that yeah
+
+59:42.420 --> 59:46.260
+there is one issue but i think uh you know before this upgrade right
+
+59:46.260 --> 59:50.820
+in the past three months we also do see you know ntp singular which
+
+59:50.820 --> 59:54.900
+which comes and then they auto close right after the work you know so
+
+59:54.900 --> 59:57.780
+so that there are two issues as far as ntp right one is the one that you talk
+
+59:57.780 --> 01:00:00.100
+about just now right but the other one is that you know
+
+01:00:00.100 --> 01:00:04.260
+during the exact vt upgrade or db node upgrade right there are two things you
+
+01:00:04.260 --> 01:00:08.340
+observe one is you know the the far system space alert
+
+01:00:08.340 --> 01:00:12.420
+right and the other one is the ntp sync alert right with the older version
+
+01:00:12.420 --> 01:00:15.060
+where it comes and they auto close right so
+
+01:00:15.060 --> 01:00:19.460
+question right really is that um is there any blackout set up for
+
+01:00:19.460 --> 01:00:24.740
+not alerting for these two areas okay there are two things to this
+
+01:00:24.900 --> 01:00:28.580
+one one is yes the blackouts are set as part of
+
+01:00:28.580 --> 01:00:33.780
+the upgrade process of analyze only when we kick off the upgrade the blackout
+
+01:00:33.780 --> 01:00:38.500
+is set by the zdt tool itself but at this time those blackouts are not
+
+01:00:38.500 --> 01:00:41.380
+working as expected that is already been raised to the
+
+01:00:41.380 --> 01:00:43.780
+gdt team and they are working on that one
+
+01:00:43.780 --> 01:00:47.620
+they probably put some work around into it somewhere it's i think
+
+01:00:47.620 --> 01:00:51.140
+uh working maybe somewhere it's not working
+
+01:00:51.140 --> 01:00:54.820
+this was so they're still checking on that is still work in progress
+
+01:00:54.900 --> 01:01:00.500
+second thing on the ntp thing the ntp the thing is that after the upgrade is
+
+01:01:00.500 --> 01:01:02.900
+done and then blackouts got removed
+
+01:01:02.900 --> 01:01:06.500
+automatically then it will throw the error of ntp if
+
+01:01:06.500 --> 01:01:11.620
+it is not in sync now at this time it will even if it is
+
+01:01:11.620 --> 01:01:16.020
+in sync it will still throw the error because the service's name is changed
+
+01:01:16.020 --> 01:01:20.420
+that is already been worked out by em team they are going to implement the
+
+01:01:20.420 --> 01:01:24.900
+feature today i think uh yes i i think that the second issue i'm aware because
+
+01:01:24.900 --> 01:01:26.820
+you know uh those
+
+01:01:26.820 --> 01:01:30.980
+those uh esr is not close right because of the
+
+01:01:30.980 --> 01:01:35.700
+problem with the new version right so those i know and and i know the em has a
+
+01:01:35.700 --> 01:01:40.260
+bug to resolve this right but the other two right you know um
+
+01:01:40.260 --> 01:01:44.340
+you know because we can during the upgrade i don't think we get any issues
+
+01:01:44.340 --> 01:01:48.580
+during the upgrade for ntp because if blackout is in place so that is being
+
+01:01:48.580 --> 01:01:52.100
+worked on another thing is the file system issue there again there are two
+
+01:01:52.100 --> 01:01:54.900
+things to it if it is in blackout we won't get the issue
+
+01:01:54.900 --> 01:01:57.940
+issues but if the blackout is not working
+
+01:01:57.940 --> 01:02:01.860
+so then we will get the alerts for the file system ones so so
+
+01:02:01.860 --> 01:02:05.940
+so maybe i suggest this right down to discuss this on on this call with so many
+
+01:02:05.940 --> 01:02:09.860
+people maybe you know namachi and and rb right um
+
+01:02:09.860 --> 01:02:13.780
+you know can sync up on you know those alerts that we saw right uh
+
+01:02:13.780 --> 01:02:18.420
+you mentioned that you know the zbt is working on the blackout to resolve the
+
+01:02:18.420 --> 01:02:24.900
+blackout issue yeah yeah okay so once we get from them that okay now the the
+
+01:02:24.900 --> 01:02:28.660
+it's fixed and we also see that okay we are not getting any alerts because we
+
+01:02:28.660 --> 01:02:32.500
+are getting unreachable alerts also even the database team are getting their
+
+01:02:32.500 --> 01:02:36.180
+their alerts as well that instance is down or something
+
+01:02:36.180 --> 01:02:41.220
+when we are upgrading so that yeah if you are okay right i'll get
+
+01:02:41.220 --> 01:02:45.540
+namachi to touch base with rb just to make sure that we are on the same page
+
+01:02:45.540 --> 01:02:49.700
+as far as the right and and if if what you're saying is that if the
+
+01:02:49.700 --> 01:02:54.740
+blackout works then you know all these alerts should go away right yeah yeah
+
+01:02:54.900 --> 01:02:57.940
+this time it's work in progress we are aware of this issue with the blackout
+
+01:02:57.940 --> 01:03:02.980
+thing so i think once we get permission from the
+
+01:03:02.980 --> 01:03:07.060
+problem is fixed okay okay so other other question
+
+01:03:07.060 --> 01:03:10.740
+pina case does it does this process
+
+01:03:10.740 --> 01:03:15.700
+write files to you know say slash or slash where or something yes it does
+
+01:03:15.700 --> 01:03:21.140
+yeah yeah it does what is the size of those files
+
+01:03:21.140 --> 01:03:24.340
+i'm not sure of the size of the files but it does the cleanup also after the
+
+01:03:24.340 --> 01:03:29.460
+updates are done um okay okay
+
+01:03:29.620 --> 01:03:35.860
+that's why we get done yeah that's right yeah and and that's why if we if we can
+
+01:03:35.860 --> 01:03:39.140
+get the blackout to work right then at least we'll reduce you know all these
+
+01:03:39.140 --> 01:03:42.340
+four five thousand alerts you know that we get
+
+01:03:42.340 --> 01:03:45.940
+but they should have been coming since tuesday only if we are getting
+
+01:03:45.940 --> 01:03:50.340
+no we uh we analyzed the past three months uh
+
+01:03:50.340 --> 01:03:54.100
+uh pinaxola i say right there there are three things right one is
+
+01:03:54.100 --> 01:03:57.620
+far system space alert right uh and then second one is
+
+01:03:57.620 --> 01:04:01.460
+the older version and tt sync alert right and and those auto clothes right
+
+01:04:01.460 --> 01:04:03.860
+after the upgrade is done and the third one is
+
+01:04:03.860 --> 01:04:05.540
+the one that you just described by the new
+
+01:04:05.540 --> 01:04:09.380
+new version of ol7 right uh that we need to change it to
+
+01:04:09.380 --> 01:04:13.540
+use the new you know yeah
+
+01:04:14.100 --> 01:04:18.580
+yeah these alerts should have been coming from 23rd july onwards
+
+01:04:18.580 --> 01:04:23.860
+yeah if it comes before 23rd july then it's probably some other reason yep yep uh
+
+01:04:24.100 --> 01:04:26.900
+i i think i i did notice that 23rd you know
+
+01:04:26.900 --> 01:04:30.820
+onwards right with the new version uh so so yeah uh
+
+01:04:30.820 --> 01:04:34.100
+namachi if you can sync up with um with rb
+
+01:04:34.100 --> 01:04:37.140
+just to make sure that we're on the same page for the file system and the mtp
+
+01:04:37.140 --> 01:04:41.620
+stuff okay this is actually uh running for a
+
+01:04:41.620 --> 01:04:48.100
+very long days it seems uh um i have seen this mtp sync issue occurs
+
+01:04:48.100 --> 01:04:52.020
+for a few still a couple of months maybe even six months around
+
+01:04:52.020 --> 01:04:53.220
+whenever after
+
+01:04:54.100 --> 01:04:57.540
+they didn't whenever they accidentally know the reboots
+
+01:04:57.540 --> 01:05:01.620
+were happening six months before namachi so that's what i am trying to say that
+
+01:05:01.620 --> 01:05:06.100
+if it is happening before these 23rd then it's not due to the grades maybe
+
+01:05:06.100 --> 01:05:11.780
+some other reasons behind it yeah you know yeah
+
+01:05:11.780 --> 01:05:16.980
+because we did a lot of those um you know fixes remember the the
+
+01:05:16.980 --> 01:05:20.180
+vulnerability fixes in the previous couple of months right so
+
+01:05:20.180 --> 01:05:23.940
+so we did notice right over the three months we have space alert as well
+
+01:05:23.940 --> 01:05:28.580
+as you know uh mtp so uh let namachi sync up with rb right
+
+01:05:28.580 --> 01:05:32.260
+we just want to make sure but yeah i mean uh since we are
+
+01:05:32.260 --> 01:05:36.820
+moving to the other service name and the bug fixes are being applied so probably
+
+01:05:36.820 --> 01:05:40.260
+it would be best that after the grades we analyze the
+
+01:05:40.260 --> 01:05:43.780
+data i mean um since we are moving away from the
+
+01:05:43.780 --> 01:05:46.100
+service name also and fix is being applied
+
+01:05:46.100 --> 01:05:49.620
+so that would be the ideal way i think to troubleshoot things rather than going
+
+01:05:49.620 --> 01:05:53.780
+into the past data which we is probably well
+
+01:05:53.940 --> 01:05:57.380
+we we we just want to make sure we have closure as far as the blackout
+
+01:05:57.380 --> 01:06:01.700
+uh issue that you guys are working on with uh the sc team right
+
+01:06:01.700 --> 01:06:05.060
+yeah sure advice this activity process and okay so
+
+01:06:05.060 --> 01:06:09.540
+so yeah i uh namachi uh if if you can call me later regarding the network
+
+01:06:09.540 --> 01:06:13.220
+interface stuff you know i um i'll talk to you who
+
+01:06:13.220 --> 01:06:15.540
+you know we need to reach out to like to look at
+
+01:06:15.540 --> 01:06:23.620
+the interval if you don't mind sure sure project one question about pinak so the
+
+01:06:23.940 --> 01:06:26.500
+next round of upgrades for the 600 plus uh
+
+01:06:26.500 --> 01:06:29.540
+accelerator clusters
+
+01:06:32.020 --> 01:06:36.740
+and uh was it using the zdt tool or
+
+01:06:38.020 --> 01:06:42.020
+okay okay and that was in the last four or five months or
+
+01:06:42.020 --> 01:06:45.700
+what was the time frame i think couple of months back only we did it
+
+01:06:45.700 --> 01:06:47.940
+uh
+
+01:06:47.940 --> 01:06:51.940
+yeah so it's uh probably we did in uh april
+
+01:06:51.940 --> 01:06:53.940
+two three months i think yeah
+
+01:06:53.940 --> 01:06:58.740
+yeah we did okay i'll find that yeah
+
+01:06:58.740 --> 01:07:00.980
+maybe
+
+01:07:00.980 --> 01:07:04.500
+sorry even we can try uh notice from here onwards
+
+01:07:04.500 --> 01:07:08.340
+at least uh any ntp sync comes after any zdt upgrade we can
+
+01:07:08.340 --> 01:07:12.340
+have a watch out uh apart from this crony
+
+01:07:12.340 --> 01:07:17.140
+ol7 leaving that if any other ntp sync if it is coming after this
+
+01:07:17.140 --> 01:07:23.780
+is it the upgrade kind of we can watch out thanks but however we look thanks
+
+01:07:23.940 --> 01:07:27.940
+okay i'll just cover a few of the things
+
+01:07:27.940 --> 01:07:34.020
+post upgrade uh which is uh or the analyzed ones which is
+
+01:07:34.020 --> 01:07:37.700
+sort of work rounds given to us not a not a
+
+01:07:37.700 --> 01:07:43.620
+fix i i would say so abhimanyu you can stop your screen and then i'll share my
+
+01:07:43.620 --> 01:07:45.940
+screen
+
+01:07:45.940 --> 01:07:48.940
+online
+
+01:07:48.940 --> 01:07:51.940
+yeah
+
+01:07:53.940 --> 01:07:55.940
+.
+
+01:07:55.940 --> 01:08:00.180
+so you guys can see my screen so this is our main conference for x
+
+01:08:00.180 --> 01:08:05.060
+excited upgrade 1923 upgrade which we are doing so
+
+01:08:05.060 --> 01:08:08.580
+the way we are moving so in the past we have been
+
+01:08:08.580 --> 01:08:13.460
+doing upgrades based on colos so the data was
+
+01:08:13.460 --> 01:08:18.820
+created using colos and then we used to kick off
+
+01:08:18.820 --> 01:08:23.940
+the upgrades and the regions wise as in the windows as we know that in the
+
+01:08:23.940 --> 01:08:30.100
+mldc is 19pt and emia once 13pt and apac was 5pd that's how
+
+01:08:30.100 --> 01:08:33.620
+we were upgrading but this time we are dependent on gi
+
+01:08:33.620 --> 01:08:36.820
+upgrade gi is one of the components on the database
+
+01:08:36.820 --> 01:08:41.220
+called grid infrastructure it should be on 12.2 which we have been talking about
+
+01:08:41.220 --> 01:08:48.180
+before we can upgrade to db nodes to this one and cell nodes from this one
+
+01:08:48.340 --> 01:08:51.460
+so this was the page for the cell nodes which we did
+
+01:08:51.460 --> 01:08:53.700
+uh
+
+01:08:53.940 --> 01:08:59.380
+so to answer your question uh raja we ended on july 7th we
+
+01:08:59.380 --> 01:09:04.820
+started on may 19th and we ended on july 7th for those cell node upgrades this
+
+01:09:04.820 --> 01:09:10.340
+was a tracker here and uh so this is the page
+
+01:09:10.340 --> 01:09:14.500
+now we started with only one slot so far last week
+
+01:09:14.500 --> 01:09:19.860
+which was this uh slot 104 and which was comprising 40 clusters
+
+01:09:19.860 --> 01:09:23.140
+this is the page for db nodes and then we are
+
+01:09:23.140 --> 01:09:29.540
+starting with now slot 101 for another 48 clusters
+
+01:09:29.540 --> 01:09:33.700
+and analyze is being kicked off for these all clusters
+
+01:09:33.700 --> 01:09:36.740
+so it's all these slots were made by a provisioning team
+
+01:09:36.740 --> 01:09:40.420
+based on their plan and then we are just using those
+
+01:09:40.420 --> 01:09:44.100
+slots for upgrades and same with cell node upgrades
+
+01:09:44.100 --> 01:09:48.580
+as we fix the the db node upgrades thing then we will move
+
+01:09:48.580 --> 01:09:53.140
+for the cell nodes now the custom things which i'll like to
+
+01:09:53.140 --> 01:09:58.100
+discuss on is this mentioned in the common issues
+
+01:09:58.100 --> 01:10:02.980
+instructions first thing is that as a pre-request
+
+01:10:02.980 --> 01:10:07.220
+like sp should be more than less than 30 days of uptime
+
+01:10:07.220 --> 01:10:12.980
+same thing is that the mc version of all accelerator should be on this today
+
+01:10:12.980 --> 01:10:16.500
+dot eight hyphen two i think is the version
+
+01:10:16.500 --> 01:10:21.140
+maxim is on two dot seven so we have to upgrade the m collective first
+
+01:10:21.140 --> 01:10:22.820
+using this script
+
+01:10:23.140 --> 01:10:27.460
+provided by scotty's team automation team
+
+01:10:27.460 --> 01:10:31.140
+it will not just upgrade the m collective it will
+
+01:10:31.140 --> 01:10:38.500
+also upgrade other ruby packages as well now another thing which we are coming
+
+01:10:38.500 --> 01:10:41.380
+across during analyzed checks is that all analyze
+
+01:10:41.380 --> 01:10:49.060
+fails stating that we have custom rpms installed on our exa datas custom rpms
+
+01:10:49.060 --> 01:10:52.900
+are the rpms which are not part of the iso image
+
+01:10:53.140 --> 01:10:57.220
+exadata those can be our power broker packages
+
+01:10:57.220 --> 01:11:01.540
+editor packages to name a few some some other exa
+
+01:11:01.540 --> 01:11:06.580
+aps b apps created the the older aps team created some packages and installed
+
+01:11:06.580 --> 01:11:10.420
+on the exa datas so those are the things which with rpms
+
+01:11:10.420 --> 01:11:14.660
+are installed on it now a lot of rpms are whitelisted some
+
+01:11:14.660 --> 01:11:18.900
+of the rpms we have to remove before analyze can be we can have a
+
+01:11:18.900 --> 01:11:23.060
+clean and on this so once those packages are removed
+
+01:11:23.140 --> 01:11:29.940
+then after the upgrade is done we have to install the rpms manually
+
+01:11:29.940 --> 01:11:34.660
+which is listed in
+
+01:11:34.660 --> 01:11:39.140
+uh under fs red mean under this directory
+
+01:11:39.140 --> 01:11:43.140
+now in the first iteration in pilot tests of three four clusters we were
+
+01:11:43.140 --> 01:11:46.180
+just checking what are those rpms which we
+
+01:11:46.180 --> 01:11:51.060
+need to install and get and get it posted over here but now this
+
+01:11:51.060 --> 01:11:52.820
+is the script is created
+
+01:11:53.140 --> 01:11:59.460
+and it is put as part of the this script is created and given to
+
+01:11:59.460 --> 01:12:04.340
+uh the zd team and they have been incorporated into the
+
+01:12:04.340 --> 01:12:11.380
+upgrade process only so we don't need to run any manual rpm installations
+
+01:12:11.380 --> 01:12:15.060
+but in case some upgrade fails at post upgrade
+
+01:12:15.060 --> 01:12:19.780
+so this script won't get executed and then we have to
+
+01:12:19.780 --> 01:12:23.060
+do it manually if you don't run this script
+
+01:12:23.060 --> 01:12:26.820
+then you won't be able to log in using ldap because with
+
+01:12:26.820 --> 01:12:32.180
+ol7 ldap config is using
+
+01:12:32.180 --> 01:12:37.620
+ssd instead of nsd table so this needs to be changed in ldap
+
+01:12:37.620 --> 01:12:41.140
+config this is for the authentication purposes
+
+01:12:41.140 --> 01:12:45.540
+then there is another thing which we have to run this is for nproc limits
+
+01:12:45.540 --> 01:12:51.940
+which we have to run before the upgrade so this is also mentioned then for ntp
+
+01:12:51.940 --> 01:12:52.420
+alerts
+
+01:12:53.060 --> 01:12:56.660
+since the em alerts we can't be dependent on the
+
+01:12:56.660 --> 01:13:00.820
+em because it will fail so there is a script which will check
+
+01:13:00.820 --> 01:13:04.820
+if there is any time lag or not using the crony service
+
+01:13:04.820 --> 01:13:08.740
+so these are the main i mean these things which we have to do
+
+01:13:08.740 --> 01:13:14.900
+after the before or after the updates so as we progress further then that these
+
+01:13:14.900 --> 01:13:18.180
+tweaks will be put in place in the in the upgrade
+
+01:13:18.180 --> 01:13:22.100
+process itself automatically purchased to let you know that this is
+
+01:13:22.100 --> 01:13:27.220
+some of the manual stuff which we are doing at the moment
+
+01:13:27.220 --> 01:13:31.300
+any any questions uh guys
+
+01:13:34.100 --> 01:13:39.220
+uh whatever upgrades we are going to update here after all we'll move to ol7
+
+01:13:39.220 --> 01:13:44.340
+is it happening i'm sorry i didn't get your question
+
+01:13:44.340 --> 01:13:51.940
+what do you mean by it's here after everything will go to l7 is it yes
+
+01:13:53.060 --> 01:13:59.620
+okay so this version 19.2.3 is ol7 based version
+
+01:13:59.620 --> 01:14:01.860
+okay
+
+01:14:03.620 --> 01:14:07.140
+okay once we are done with the image upgrade then the database team will be
+
+01:14:07.140 --> 01:14:12.340
+upgrading the databases to 19c that's the target
+
+01:14:13.460 --> 01:14:18.420
+okay so other things are this conference of what abhimanyu was showing that sop
+
+01:14:18.420 --> 01:14:21.940
+we will be publishing that sop through through this page only we will be
+
+01:14:21.940 --> 01:14:24.820
+going out to this page which is very likely oh i許le in the background
+
+01:14:24.820 --> 01:14:37.620
+but in this case
+
+01:14:39.300 --> 01:14:45.940
+see
+
+01:14:47.940 --> 01:14:49.940
+and
+
+01:14:49.940 --> 01:14:50.820
+so
+
+01:14:50.820 --> 01:14:55.460
+access to the servers they do their issues and then they go to a city on
+
+01:14:55.460 --> 01:15:07.860
+that so connect those guys are 24 by 7 right yeah yeah okay so any question
+
+01:15:07.860 --> 01:15:20.740
+guys so we will i think uh you guys can you start yeah go ahead can i share that how we can
+
+01:15:27.140 --> 01:15:30.020
+i'm sorry say again start upgrade using those
+
+01:15:33.300 --> 01:15:37.780
+ah the script one yeah you can show the script so the guys the to make things easier
+
+01:15:37.860 --> 01:15:42.340
+or whatever config files are being created in other steps abhimanyu has created the script
+
+01:15:42.340 --> 01:15:49.220
+for both analyze and upgrade both cell and database so you can uh show the script also
+
+01:15:53.380 --> 01:16:00.820
+so what script will do is it will create the config files in the directory automatically
+
+01:16:00.820 --> 01:16:05.700
+it will kick off the analyze also it will show the command which is to be there for monitoring
+
+01:16:05.700 --> 01:16:06.820
+purposes and everything
+
+01:16:07.860 --> 01:16:12.660
+just have to copy and paste the command and then you will be able to all second monitor
+
+01:16:15.060 --> 01:16:21.780
+even that all pod info that stuff also will be taken care by the script yeah so
+
+01:16:24.580 --> 01:16:31.460
+okay so what you need to do is we just need to prepare you know our which host we are going
+
+01:16:31.460 --> 01:16:37.380
+to upgrade so i just know uh the script was created for the cell and the db both uh but for
+
+01:16:37.860 --> 01:16:48.100
+then the db uh you know so one more question sorry this is a slash file system for actually
+
+01:16:48.100 --> 01:16:54.900
+a b or somebody uh any possibility which fills uh kind of during upgrade uh which caused this
+
+01:16:54.900 --> 01:17:01.940
+slash file system phone take it offline yeah sure to get the info it's fine yeah thanks
+
+01:17:03.140 --> 01:17:03.540
+thank you
+
+01:17:05.540 --> 01:17:06.500
+so for this uh
+
+01:17:08.020 --> 01:17:14.580
+this is a strip location in chicago and it will be you know everywhere in the same location so
+
+01:17:14.580 --> 01:17:20.020
+i'm just running it without any flags so it will just give you the idea what what what flag we can
+
+01:17:20.020 --> 01:17:27.380
+use it so basically for the analyte just use hyphen a or uh hyphen hyphen analyte and for the
+
+01:17:27.380 --> 01:17:35.940
+grade hyphen so you or hyphen hyphen upgrade we can also monitor the you know our request id like
+
+01:17:35.940 --> 01:17:37.780
+you know ever we used to do them manually
+
+01:17:37.860 --> 01:17:43.300
+but using uh this is we can monitor you know multiple jobs together as well
+
+01:17:44.580 --> 01:17:52.500
+okay so as pinag was saying uh this will create the configuration file you know then use those
+
+01:17:52.500 --> 01:17:58.900
+configuration files for the upgrades and initiate the upgrade and it will give you the request id
+
+01:17:58.900 --> 01:18:07.380
+for the each cluster and for the db node it will also add the as called the info entry automatically
+
+01:18:08.660 --> 01:18:13.780
+okay so i have one cluster uh for the analyze i'll just use it
+
+01:18:16.420 --> 01:18:21.780
+and you know this will automatically create uh the directory based on your uid
+
+01:18:21.780 --> 01:18:28.180
+and the date okay so if you're doing something else you'll see here your uid and the today's date
+
+01:18:28.180 --> 01:18:35.140
+okay uh i have a database node here 95 and 96.
+
+01:18:36.260 --> 01:18:37.700
+uh so you're just
+
+01:18:37.860 --> 01:18:41.460
+putting comma separators value uh i mean just the thought name
+
+01:18:42.980 --> 01:18:44.900
+we don't need to put here the fqdn
+
+01:18:46.980 --> 01:18:52.100
+okay if you have you know the second set of cluster you can put in the next line and so
+
+01:18:52.100 --> 01:18:57.620
+so like that it will work on so but always uh please put you know one cluster in one line itself
+
+01:18:57.620 --> 01:19:05.220
+otherwise it will not it will be a problem okay just to save the data just pressing on the ctrl d
+
+01:19:06.020 --> 01:19:07.780
+uh it will show you uh you know
+
+01:19:07.860 --> 01:19:13.540
+you have put your primary node is this and secondary node is this okay then it will also
+
+01:19:13.540 --> 01:19:19.460
+tell you you know for which version this upgrade or analyze is going to happen okay so as we have
+
+01:19:19.460 --> 01:19:24.500
+started for the analyze it is asking for the you know the confirmation if you feel you know
+
+01:19:24.500 --> 01:19:30.420
+something is went wrong or you have entered somehow the wrong hosting just enter n okay
+
+01:19:30.420 --> 01:19:37.380
+so it will not move on so i'm not i'm just using here the yes giving the indication to go ahead uh
+
+01:19:38.340 --> 01:19:45.460
+and see here now it has started updating the all pod info for this cluster
+
+01:19:46.580 --> 01:19:52.900
+suppose we have multiple cluster it will do for the multiple servers okay now it is showing us
+
+01:19:52.900 --> 01:19:58.980
+like the db node analyze command so the primary node is this it has automatically formed the
+
+01:19:58.980 --> 01:20:06.500
+command and it is now initiating uh running the command for the analyze and we see here the analyze
+
+01:20:07.860 --> 01:20:12.580
+all the configuration files i'll show you whether where it has been you know created
+
+01:20:12.580 --> 01:20:16.820
+this process will go on but meanwhile let me show you the configuration file it has created
+
+01:20:22.420 --> 01:20:27.460
+see here this has automatically created the configuration file we just had to put the host
+
+01:20:27.460 --> 01:20:36.100
+name and i'll go to this directory and it will have some more details uh which i'll just succeed
+
+01:20:36.100 --> 01:20:48.340
+okay so basically we see uh our host uh 95 uh it is the configuration file is created
+
+01:20:50.020 --> 01:20:55.220
+then we are seeing you know uh the command which is basically we saw here on the
+
+01:20:55.220 --> 01:20:58.260
+screen this will also list out here uh
+
+01:21:02.420 --> 01:21:05.860
+so we can see here uh it has not you know updated
+
+01:21:06.100 --> 01:21:09.700
+the reason is uh the process is not finished here yet but it will come up
+
+01:21:11.060 --> 01:21:18.020
+so once it's finished uh we will see and we will see we are seeing here the different files created
+
+01:21:18.020 --> 01:21:21.700
+like the this this file will have all the deep analyze dd commands
+
+01:21:22.740 --> 01:21:26.180
+this file will have all you know the request id for each cluster
+
+01:21:29.140 --> 01:21:35.220
+yes for the previous one it is there the new one will be updated as well then
+
+01:21:36.500 --> 01:21:40.740
+let's consider we are you know running the upgrade also we will see here the upgrade
+
+01:21:40.740 --> 01:21:48.100
+command and the upgrade request id we will also see uh what all nodes what nodes we have entered
+
+01:21:48.100 --> 01:21:51.860
+so it will you know automatically form the student for that
+
+01:21:54.580 --> 01:22:01.860
+okay i think this is finished here so here you see uh uh this is for the previous job id okay
+
+01:22:01.860 --> 01:22:06.020
+so not to bother about this because uh we are using the same directory so we used to
+
+01:22:06.020 --> 01:22:11.460
+use the same directory for the previous job id so it is just showing you the this job was also
+
+01:22:11.460 --> 01:22:17.060
+run today but we entered here the 95 post so for that we have got the request id automatically
+
+01:22:18.580 --> 01:22:24.340
+and uh these things will you know tell us uh what our the logs which i was talking here right so
+
+01:22:24.340 --> 01:22:30.340
+these files part and location what is there okay so let's consider our analyze this you know
+
+01:22:30.340 --> 01:22:34.260
+started now if i have to monitor it okay so just use iphone m
+
+01:22:34.260 --> 01:22:35.940
+i'm just monitoring the previous one
+
+01:22:36.260 --> 01:22:41.860
+uh i think that was for the okay let's monitor this one
+
+01:22:44.420 --> 01:22:49.860
+just give the request id if you want to give them you know the other request id again just give it
+
+01:22:50.660 --> 01:22:57.220
+and control d uh it will show you you know the job id which you have mentioned it will save it here
+
+01:22:57.940 --> 01:23:05.140
+okay and you see here so for the 95 one this has started and it is still running the previous one
+
+01:23:05.140 --> 01:23:05.940
+which i started
+
+01:23:06.260 --> 01:23:10.660
+which that also i wanted to monitor now and that is showing you know the completed
+
+01:23:10.660 --> 01:23:16.420
+activity so basically it will give you the start information whether you know job is actually
+
+01:23:16.420 --> 01:23:22.020
+completed or free if it is failed then you can have a you know the actual progress report and see
+
+01:23:22.020 --> 01:23:30.260
+and in the logs directly like how it is done so this is how it is uh and for the upgrade
+
+01:23:30.260 --> 01:23:33.860
+uh it will be again just uh hyphen new option that's it
+
+01:23:36.260 --> 01:23:37.700
+so any questions for this
+
+01:23:45.300 --> 01:23:51.620
+yeah we have created a conference also to use the script so the guys can go through that and
+
+01:23:52.740 --> 01:23:57.460
+probably run this script when they are running an analyze for cells or dvs
+
+01:24:00.100 --> 01:24:03.140
+so you don't have to do manually create the configuration file
+
+01:24:04.260 --> 01:24:05.380
+so
+
+01:24:05.380 --> 01:24:08.620
+we just plug it into your directory and it will show you the
+
+01:24:08.620 --> 01:24:20.560
+equivalent of killing and the
+
+01:24:20.560 --> 01:24:27.020
+table image value frame okay so everyone you can send out the confidence pages for
+
+01:24:27.020 --> 01:24:30.500
+to the team over part of this invite and they can go through that
+
+01:24:30.500 --> 01:24:33.040
+yeah i'll do it and the hoop also
+
+01:24:33.040 --> 01:24:38.980
+finalized people are still checking if there are any tweaks to be done so we
+
+01:24:38.980 --> 01:24:42.040
+will publish in the same conference which I was showing you the our master
+
+01:24:42.040 --> 01:24:52.120
+conference for the page if no questions I think we can wrap it up and guys can
+
+01:24:52.120 --> 01:24:58.600
+you can bring up even new Rishi Kant or more if you have any queries or current
+
+01:24:58.600 --> 01:25:08.840
+also great session I'll be when you and Pinnock thanks for that very useful
+
+01:25:12.840 --> 01:25:15.940
+thank you
+
+01:25:19.140 --> 01:25:22.760
+yeah thanks my
+

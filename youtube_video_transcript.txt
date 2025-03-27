@@ -1,0 +1,961 @@
+I'll just start it with the project hello everyone yeah can you hear us we
+know yeah it's fine thank you good morning good afternoon everyone I'll be
+sharing the details you know about how we are starting well now then big you
+know then alive and that's great I'll also you know
+focus on how we start in you know some of the pieces which we take care before
+the Excel analyze and then how we pick off the analyze and update using manual
+method also using some of this so we have couple of constraints which I just
+share the link and the details are mentioned there but again some of the
+process you
+you know it will get things out anymore decision she but again бытьwind metiful
+know so
+two things first things which we are doing is we are going to upgrade this
+time while cell and devices to the 19.2 version so it is this data image version
+of your 19.2 few months and one or two months later we will be�
+uh t outra...
+back we did another play to twelve point dot dot eight but again we need to
+upgrade and tell and dv4 I just know it's going on I have two three servers
+to say if I have it so you know what all commands we do what all pieces we run
+for that the first thing which we do is we take the item of time I know what
+time should be you know less than 30 days otherwise our analyze will fail so
+in in this case suppose for the best practice we usually run humanized at
+least one week in advance so let's consider you know our island of 10 is 25
+days now and
+our upgrade is going to be scheduled in the next week so by the next week I know
+of time will be you know more than 30 days so in those cases if you see you
+know on an average item of time is more than 30 20 days you may reset dial ohm
+not a problem but if you're still sure like you know you'll be a plane tomorrow
+day after tomorrow not needed so I am NOT visiting the I know no as you know
+the commands are mentioned here it will be working fine not a problem the first
+thing is here we can see up time and then the second one is it will reset
+dialogue once I don't reset is done we can you know again take the off time but
+some of the situations here like I'll just show you on my screen here we see
+the I know much that is not working so this is what I have learned now like for
+example you know most of the server systems dial on it is let's let's not
+highlight the thing where it's not working go with the ideal so another
+command is to take the so faulty which will start false mention you know in this
+you know then I know
+except the disk thing the next command will need to take the physical disk
+status for the cell and the DB as well so it will see whether you know this is
+in the normal or the failed status or in any other like in the predictive failure
+for the physical disk also we can see whether it is you know particularly failed or not
+and this one is also important sometime you know we might not get into faulty or in the
+disk but this tech hardware profile will list out all hardware faulty using this
+command okay one of the best practice also we follow is we take the alert history in some cases you'll see
+there there are alert history but even though it is already cleared and not cleared I mean
+the actual error is fixed that we need to see whether it is really fixed or not that
+you can get it in hardware tech profile or any other this is also important to
+take the critical error in the alert history so this is this command will give you the
+critical alert history if at all you need to drop the alert history
+in case the fix has been applied and you're still seeing the alert history please drop
+this using this one okay recently we encountered one bug where you know if there is a you know
+this is 8 terabytes or 10 terabytes we were asked not to you can skip this one abhimanyu
+it's not applied to the 19.2.3 version okay fine so similar pretext is for the alert history
+yeah and so you can check just line of top last time here it is 90� 01 00 which we
+don't like but yes i will explain to you how you can
+And finally to this look like total error I apologize I was doing some basting
+But run on over the division on Sunday so now I'll be showing you how we
+Apparently doing other than analyze or the being alive I'll show you both
+Before before abhimanyu runs the analyze I'll just brief that the process or the flow
+we go through so these upgrades are divided into two parts one is the pre
+check which we call as analyze checks second one is actual upgrade in the
+analyze checks it will do the analysis of both hardware and software everything
+that the cluster is healthy and ready for upgrade now this analyze process
+when we kick off it takes around one hour for each cluster so to minimize
+that thing that okay we can just instead of running analyze and get the hardware
+issues from there will be running hardware checks ourselves first which I
+be when you showed those commands of resetting the SP or the alert history
+and all that so we can check the hardware stuff in that those using those
+commands itself which we can do it in probably 15-20 minutes per cluster and
+then raise the MOS cases get the hardware fixed once the hardware is
+fixed then we can run the actual analyze which will actually still have those the
+disks issues or other hardware faults won't be coming and analyze and will be
+just the other issues which we highlighted but since okay the one thing
+is that we can use show faulty which everyone knows that using show faulty you
+can see the hardware issues but show faulty will never tell you the disk
+issues or disk issues we use those
+issues so after all these issues are fixed and then we run the actual
+analyze which is for both cell and DB this is there is called cell cli utility
+for the piece it's dBM cli utility if everyone you can scroll up those
+commands are listed everyone can see that so you can see that for basically
+for discs we are running different commands to get the disk issues because
+disk issues won't be listed in show faulty output so after these hardware
+analyze which abhimanyu is going to show you thank you so yes we run the analyze on the respective
+gdt servers and gdt as you aware it stands for the zero downtime and so you know developed by the
+you know you can say the software engineering team so there is a constant space for the as
+everyone aware where every gdt server is listed out
+show you okay this is one so if you search here the gdt you will get it for
+each color there is one more page maintained by the dba team that also i can share with me
+okay so i have logged into the chicago gdt server already
+and
+usually our path for the upgrade will be this one where the clm
+they call it the clm cli utility uh which has been you know the configured on this part
+okay so for the best practice uh you know as there will be multiple servers involved
+we should have your our own directory uh where we'll be usually you know keeping the
+server configuration file and the other details you can also have in that in this directory like
+you see here uh someone has already created the configuration file but it does not harm it's okay
+if you are not comfortable you can have your own uh subdirectory and then uh when the analyzing
+so what i'll do is i'll use this uh directory only for now and then create configuration
+file and uh tick off the analyze manually
+so
+how do you create the config files for each host uh sorry you missed that
+yes i'll just
+it's manual just just go into the working directory and then we just vi an empty
+file and put the contents in it okay so so module
+maybe
+ah
+i have just done you know the vi and i have basically given this
+question and this is the host name the primary data and this is the main
+code number
+and uh we need to have
+we need to have
+and uh we need to have
+and we need to have
+this content so the first line is the host is okay and after equal to we
+should have the excel host name which for which the cell upgrade you know we
+are going to perform so we have a you know recommendation to use only one host
+primary DB node name for you know each configuration as it will help us you
+know just to view and monitor our upgrade but if somebody is comfortable
+they can have the more host also here in you know the coma separator value so so
+what abhimanyu saying that we can kick off analyze using one configuration file
+on multiple clusters also so but recommendation is that we put only one
+cluster because then log will be created one file only it will be difficult for
+us to to troubleshoot if some failures are
+going to happen so that's why we are going to do that so that's why we are
+going to do that so that's why we are going to do that so that's why we are
+going to do that so that's why we are going to do that so that's why we do that
+the curse for both the clusters or something since it's good to use only
+one fine as well you can just put one cluster name only so in this case this is
+the cutting is there one question so p情 syndrome percent is then going to
+omit now well keep simple and only one time you did you know okay the second
+line is the path directory so now we are going to use this back to for this
+version as I see for the Bank so the link for go toward there is a path
+directory for this version as it is for the tank so it is the path directory so
+to you will see the cell and this is this can be anything in the profession admin but we are
+going to follow the standard directory where our patch is copied as it will fail and the last one
+is very important uh the target version so target version which we have mentioned here is the 19.2
+so just save this file okay so now i have the contents of the the this uh patches directory
+also oh yes okay so here we can see uh this is for the cell i'll show you the overall
+okay so overall you will see the for the db as well and then the last one let me see for the db
+so db you are seeing the two patches
+so these are just iso files in in the zip files if you guys know like manual upgrades
+you have done so it's the same those files which we use for manual upgrades also
+using patches here so it's the same thing that we don't go into all seven directory
+okay now uh in the configuration is ready here if you see i'll be starting the analyze for this
+okay i have command prepared for this
+uh i'll be manual can you just uh go back to the previous um uh the config file screen
+because um in in the host in the host list uh you mentioned that it is for the db note isn't it
+it is for cf cldx0013 right
+directory you specify it's for cell but it is for the db note isn't it
+uh let's see uh hold on a minute so uh frankie if you have done any celebrating the celebration
+from the db node only it's not directly kicked off on any cellular all all the all the celebrates
+are to be kicked off from primary db node from a db yep there is such equivalent setup for all
+cells and okay picked up so that the host list is referred to the uh the analyze on the uh issue bd
+the cell no isn't it because we're doing the cell right because the patch directory is for the cell
+no it's not that it's it's uh we are putting the host as a primary db node from where the
+cell upgrade will be kicked off yeah or how we will be telling that it's going to be cell upgrade
+you will not come to know once we kick off the command it will be for sure that's how it will
+be kicked off so all right in addition to what pinak said uh basically the patch manager is you
+know the process which actually upgrades the cell and the db which basically runs on the primary db
+node okay so next command will give you the clear picture frankie okay okay i have command ready
+to run the db uh okay i'll see uh what all clicks it is uh as this is the path for the clm cli okay
+so basically this is nothing but you know my current working direction
+and the second i'm not sure have you mentioned that this is being run as mc user
+no i did not mention but this is mandatory to run it as mc
+login
+become mc user yes thank you and uh as this is you know you will see here the difference between
+analyze and update so for analyze this is mandatory and analyze if you skip this analyze
+it will basically upgrade it okay so we need to be very careful uh for the you know analyze and
+update so and then hyphen hyphen analyze it should be rest all so before you can even analyze this
+you want to remember that the upgrade needs to be written which you have written clm cli upgrade
+yes yes okay okay otherwise you know this what i have done is i have given the full path
+so here you can omit the full part also we can also use dot clm like this
+okay but as we will be working on from the other directory or sub directory then full path we need
+to mention it on so that's why i have mentioned there
+okay so then as this is for the cell node so here we are mentioning this cell
+typically for this is here the difference would be whether we are
+running for cell or database okay again this is next one is the config file
+hyphen-hyphen config file is in the path of the country file here this is
+mandatory to give the you know the full path you mean we have to give the
+produce path yes otherwise it's not going to you know take if you feel you
+are in your current directly anywhere and it will not take it on so there is a
+dependency this is how this has been developed okay next one is the request
+name so each you know analyze and upgrade will have the unique name and it
+can be maximum of 20 characters
+okay for the simplicity you know I have put a just for the analyze and then the
+host name and the version you know suppose sometime you will run like in a
+two times or three times so suppose I'm running for the first occurrence and I
+have used the one you can use your own you know the sort name or whatever it's
+fine but it has to be in itself this will not submit your you know the job
+I am just running now tell analysis it will take two three minutes usually to
+get the request ID see here you are think checking if this name is unique or
+not like like this it will take whether
+configuration file is proper or not and also it will show you workflows for the
+family if you you know notice like something went wrong you can
+to you know again interrupt this process fine now i have uh some request id uh which i already ran
+uh i'll show you uh you know how the actual uh when we get the request
+ready how it looks like and how we can you know monitor it
+okay
+so now i have logged in here in one of the you know the netherlands gbt server
+and again i am in the mc admin user
+so any questions so far guys
+it's okay
+no one has any questions
+no one has any questions
+if something has come okay
+no one has any questions
+no one has any questions
+so
+so
+so
+so
+so
+so
+so
+so
+so
+so
+so
+so
+so
+so so
+so
+so
+so
+um
+um
+so
+so
+um
+um
+and
+uh
+yeah
+i saw
+they were yeah there was some email or thing as well some forum anyway uh so what i'll do is
+has kicked off upgrades right in chicago so it should have been working yes it should have been
+working but uh we'll take with receipts you know it has interrupted his own job or not
+anyway i have some previous uh you know request id which i'll show you the only difference here
+is you'll get the request id okay so i i'll show you how the request id and how many digits it does
+have okay you will get the request id here you see the digits right so it will start with one five
+and it will be long digits so again to monitor the progress we have
+to be in the bin directory and then we can run this clm cli progress
+and report this in and last we'll have the unique request id which we are going to monitor
+okay now first thing we can look whether analyze is you know
+whether it is completed succeeded no error okay in this case this is idle and it looks clean okay
+but couple of things to notice here so we see here here like it does the custom pretext for
+this particular cell it does the pretext and the last it does the clean up okay so all will be
+succeeded succeeded it will this process will continue for the each cell from that particular
+so you you are seeing here
+you know all these uh cell nodes have these three steps like custom press pretext clean out
+and custom pretext and all are you know again set of multiple states and combined
+and if we see any failure you will see here the ot alert okay in this here we can you know
+take it on how does it look like as there is no you know errors you are not seeing you know
+anything here if it so usually you will see the path where you can get it on
+and then see what error it has been listed
+any questions for this
+okay oh this was for the analyze uh let's consider you know our analyze is success and
+it says succeeded and no errors we can
+uh plan it for the upgrade based on again the approvals and the jira fine for the cell upgrade
+i'm not switching off the upgrades but i'll show you how and what is the difference here
+our configuration file and everything is ready
+uh so guys guys interrupt uh where you have any questions so yep uh pinac i have one so uh what's
+the duration when we success succeeded with the analyze and and before we perform the self upgrades
+it takes around 45 minutes to one hour to run complete analyze yeah yeah um okay but but you
+know because analyze would be a you know a prerequisite before we do the self upgrade right
+what i'm trying to say is that you know what's the safe duration right between once we have a
+successful analyze and you know the next time we perform the self upgrade is this
+one day two days or yeah we actually start the analyze one week before to fix any issues which
+might come up so after after so but the way things are moving it's it's really i mean all
+the urgent ones so we are just getting in them finished two days before or something
+so if if one week before also analyze pass successfully so as a best practice we will run
+the analyzer again two days before just to see that how things are good all right cool thanks
+so this is the command which i have already prepared for the actual cell upgrade only
+distance here is the upgrade it does not have hyphen upon analyte if you see here the previous
+one does have hyphen upon analyte and what the actual upgrade you can see here is what the actual
+does not have the highest analysis so we just need to be careful that we are
+actually making you know either analyze or the upgrade so similarly we will get
+the request ID and in same way we can you know monitor our progress how it
+progresses and if there will be any failure again we can look for this OT
+alert log mentioned in this progress report and as everyone is aware we can
+you know check the cell version like this image in twice and version command
+it will show you whether how many servers are you know upgraded and how
+many pendants you can see also from this report as well so what what issues
+normally you face during pre-checks okay so during pre-checks there could be the
+hardware issues mainly
+hardware disk then CPU DIMM or power supply so it depends what what kind of
+hardware we have so major issues will be like that in case of cell
+sometimes the i-loam connectivity issues due to maybe if you reset the i-loam
+it may fix and different kind of you know fixes are there but yeah overall it is there okay so you
+initially started with running this you know commands to find faulty parts right
+you know on this so after that you do this pre-check so what's the difference
+it is just the orchestration to run across different nodes at one go or what
+is it yeah that's correct you know we can run and go and but it does have the
+additional you know command for the excel update like you know set of you know the
+multiple pre-tests not only hardware but it does have the software test also
+let's consider if you have RPM dependencies it needs to be removed so those kind of
+situations and it has multiple things to do okay got it so guys if cell analyze is
+clear I'll go ahead with how we you know do the DB analyze manually is this fine
+so guys if cell analyze is clear I'll go ahead with how we you know do the DB analyze manually is this fine
+yeah yeah you asking to run DB analyze I can so it is fine yeah we can run one
+cell analyzing some other side if Chicago one is not working but anyways
+I have asked finish team to to check on the Tomcat so let me first and so the
+DB analyze and will see if mean where it gets fixed or something okay DB analyze yeah DB analyze is fine
+Yeah, DBanalyze will take more time, right?
+Sanalyze is a more easy one.
+Anyway, it will, you know, kick off the job and I have previous Sanalyze ID so I can show
+you how it works.
+Okay.
+For a similar way as I have shown above for the DBanalyze, we do the...
+So one other thing, one other thing.
+So for 19.2.3 upgrade, there has to be some minimum version for grid, right?
+I think 12.2 or something like that.
+Yeah.
+12.2.
+12.2.
+Yeah.
+12.2.
+So is that validated during pre-checks?
+Yes.
+Yes.
+DBanalyze checks will error out if it's lower than 12.2.
+Okay.
+Okay.
+Okay.
+Thanks.
+And we have already upgraded these servers to 12.2.
+Okay.
+Okay.
+Thanks.
+Thanks.
+So for the DBanalyze itself, we have this DBNode features which I was talking earlier.
+Coming to how we actually run the DBanalyze, similarly we create a configuration file from
+the respective DDT server.
+Okay.
+So we have these three configuration files.
+Okay.
+Okay.
+okay there is a difference here uh if you see here the couple of extra lines are here
+okay so the difference start with the first one we have to put both the nodes of the cluster
+for db analysis right uh you're right and uh for two node cluster if you put just uh
+one node also it's fine but if it is a multiple then you have to uh add all nodes but in case
+of 12 node cluster are we putting all the yes please put all nodes for the best practices
+okay so no not not the odd ones or you mean
+all the nodes uh odd ones also will work but you know it is a tedious job to you know
+find out all odd nodes and then you know um put in the configuration so but uh as it is
+very easy to you know put all nodes together so i i'll say please put all nodes together
+not only the order it will not create any impact
+but when you say odd node are you talking about the primary node
+no
+Let's consider we have a 12 node in one cluster, so 1, 3, 5, 7, so what GDT consider is like
+all nodes is a primary DB node for them, for the GDT.
+Just to say more on the 12 node cluster thing, from the hardware point of view, it will look
+like it's just one rack, but it's logically split into multiple clusters of two node each.
+Like in 12 node cluster, when we say 12 node cluster, that means there are 12 XRata DB
+nodes in that rack, just single rack, which would mean that they are all logically split
+into six clusters of two node each.
+That's how the fusion architecture is.
+So then we will put all the nodes in that.
+Is it dependent on like, you know,
+the XRata shapes, like in half rack, full rack and all?
+In fusion, it's all full racks, there is no exception on that, it's all full racks.
+It's only in EM and IDM, we have quarter and half racks.
+Okay, got it.
+Okay, so again, the first, the host is on the DB node, and then the pack direct to the target
+node.
+The tracking bug is not mandatory, but again, let's have it, but we don't have any bugs
+this time.
+Okay.
+Then this is mandatory, pod suffix is equal to hyper MC, and then pod underscore failure
+thread, underscore threshold is equal to one.
+So this is, these three lines are addition to the, which we used to put in the cell.
+Okay.
+So this is the key difference in the DB node configuration and the cell node configuration.
+Okay.
+I'll just save it.
+Okay.
+So I have prepared the command for a DB node and I'll, okay, one more thing.
+The difference here is we also need when a script here is listed, add pod in this one.
+Okay.
+So what it does is it, you know, fusion team maintains the all pod information.
+Okay.
+It's associated with each DB node in one centralized location in a session admin.
+From there, it copies the pod information for that particular data node to the locally.
+Basically that local file will use for the upgrade purpose.
+So basically it uses like, you know, which database server is having what pod, because
+as you know, the automatic failover of the service happened.
+So it picks the, you know, the pod information from there as well.
+And then matches and do their calculations for that.
+Okay.
+So how we run this add pod into the test.
+It's very simple.
+It's just, you know, just mention, you know, all database nodes.
+So this script and this will go much separated.
+The CDN, we have to put it there.
+Okay.
+So it will just show you how this, you know, how many pods has been added, how many it
+has removed.
+Suppose there are some internal ports and all it will remove it.
+Yes.
+So the reason being why we adding is we need to have only the active ports listed into
+this so that the services can be failed over or stopped based on the active ports only.
+Because as we know that this is going to be all zero downtime.
+So we need to be sure that.
+Only the active ports are being running on these database nodes.
+That's the reason we running this script.
+If you don't do then our upgrade will not happen.
+And you can see here, it is copying, you know, the pod information from the backup and to
+the current one.
+So this is what it is.
+You can just list out the contents of this file.
+Just put it there.
+Okay.
+First name is the pod name and then the instance name and the node name.
+So this is the way it's listed there.
+Okay.
+Now the next, the DB node analysis.
+Tomcat is started now.
+so you can probably analyze for cell or database for this the key difference
+here is only defensive here the DB node if you see my screen here you for the
+value is to sell and here is DB node not DB but DB node okay rest all things are
+same okay again this name has to be unique so I'm just putting this now your
+request name can be anything as per your this thing is to identify your this is
+for the analyze for hyphenation analyzes you know carefully
+okay again this is taking the so apparently how this looks like so we
+were talking about we need to switch to the empty and this for admin user
+okay this is the full part where we
+can see these details mean what else will you how you can
+monitor I want
+to show a Engineeringto you how he said your request which will I see in the
+panel as well three for the request if this is which be in the system
+the какойs- assisting with me
+we kind of stack his with the click engines
+million how each one you feel oh you can monitor analyze say you got the request
+ID in the analyze command you showed that dense on the previous year let's wait for it should beами oh yeah I mean though yeah I mean the details urban banter is required
+Those are the details, you see here like NFS latency and all, sometimes if fsnadmin is slow or some other issues, you will see delay to get the request added but usually 5 minutes should be the max.
+It's heavily dependent on fsnadmin so everything is running out of there so the fsnadmin has to be healthy to run these things.
+You see here, this analyze is equal to true, right? So for upgrade you will see here the upgrade one.
+And it will also show you the log file while generating the request id.
+So if at all you see any issues during, you know, you are not getting the request id, you can have a look on this log file mention in the log file bar.
+Yes.
+The workflow here is the dbnode.
+It looks like, you know, there is some active job running for this.
+You ran multiple runs for the same?
+Maybe since from morning it is running on.
+But again, this has given us the request id which was running on.
+Okay, yeah, so in case there are duplicate ones, it will show you which request id is already running.
+So here you can see we got the request id.
+Yes.
+So let me just show you how we can monitor this.
+So actually from the notepad, sorry, wordpad, this hyphen hyphens comes, that's why.
+Yeah.
+Yeah.
+Okay.
+So here, this is running the analyze.
+From top?
+Yes.
+Okay.
+So again, this is the log file part when the request id.
+And we see here the status.
+This is running on.
+this is also listed your request ID in the unique name if you have given when
+it start time so once it's finished you will get the end time also there as of
+now itself so so the analyzer is running on all cells as you can see in the
+source output yes and also we can see here in the job one so this has not given a
+appointment and again we can always go to the first
+forgotten viruses happening here so there are two log log files which are important
+one is this alert lock
+each value pratik
+this is log directory in which or other logs will be there right yes yes so just this is one
+okay here we will see dialect log and this thing another will be under you know
+logs one will be protocol
+so you can verify with sop it should be there right oh yes
+okay so one one you know when i actually before so if you go here again the request you will see
+here yeah so these things will help us to uh you know check what all issues are there also if
+the bug team or specific marks for any log we can give it from here which file you will check on
+this in this time everyone so it does have you know uh
+under the and basically we dip it and then tar it and give it to them okay okay so yeah so when
+when we go to the next level of these teams cloud ops tech or sc team they will ask certain files
+from these directories which we provide them when we file the bug yeah okay now uh for
+let me
+run db analyst for some other cluster maybe
+pinac i have a question right so um you know from what i know the cell will take about
+two hours right for itself to be upgraded so how frequent would the fs
+uh scf to check uh the logs for issues it takes for one cell it takes around one hour
+okay so so how frequent with the scf to check
+write the locks for errors and so on it's i mean abhimanyu can tell because
+they are the ones okay for you know cell upgrade
+uh you know there was not many issues it's uh only you know there was a
+problem with the grid disk but that was for the 12.2 version okay
+usually uh you know half an hour will be idle
+uh so it will be fine half an hour should be good i think yeah
+for the cell okay yeah no i was just thinking you know
+if the s shape is be sitting on the screen and
+you know checking no not because
+okay so half an hour is is probably a good uh
+yes yeah okay yes but we are hoping you know this time
+if those known issues does not come maybe we don't have to do that frequently
+i will just change the whole thing here
+so i'm picking the another cluster here
+um
+so
+i'm not sure
+um
+i'm not sure
+um
+um
+um
+um
+um
+um
+um
+um
+um
+um
+um
+um
+um
+um
+um
+um
+um
+um
+oh
+oh
+okay you created a config in some other time yeah
+okay you created a config in some other time yeah um
+this is going to start you know the db analyze once you get the request
+can you check if you got the request id from the cell analyze you kicked off
+but
+we have the you know the cell analyze running on this so this is what we thought right
+oh yeah yeah so can we check the status yes yeah i'll take in another
+no in this session only you can check no uh no because we have started another one right
+okay
+okay
+i'm asking about that cell analytics which you picked up you're checking that one
+yeah
+yeah yes now it's uh you know it's showing still and running it will take maybe four
+five
+months
+but we see here everything we are seeing succeeded yeah so it's working on you know the final text
+maybe uh but this is pretty clean now so only changes you'll see here the completed succeeded
+no errors so these checks also run into three uh stages one is custom pre-checks another is
+pre-checks and then after it is done it will do a cleanup or whatever things they have created as
+you can see that it's all succeeded if at some stage it fails it then we will let know that
+what what stage it got failed yeah then we can go the log files alert ot logs and all those
+so we we have got you know the db analyze request now here so this is how it looks like
+this is after we analyze this is how we get this request
+then we can check the status
+so once we get the request id like uh similarly uh we can take that status but as this is very
+we have to give at least four five minutes to get to know the actual status but again similar way
+we can you know suggest it see here we have seen the running in this cell so but again once time
+passes it will create a table uh like view for the db node and it will not have the cell information
+but they'll uh db node information we'll see
+okay
+hey abby menu yeah uh if the cluster have only two uh db nodes so we can only run the one at a time
+isn't it that great for cells for db nodes we will put both the nodes that's what i think
+uh because from one of the because you um okay there's no uh db not one and maybe not two you're
+you need to upgrade if you need to upgrade you need to upgrade the db knock two from db not one
+isn't it uh yeah that will take care of it how it's gonna run that zdt will take care of it but
+our target is to upgrade both the nodes at the same time yeah at the same not at the same time
+it will be done in rolling fashion but uh okay running only one time command it will upgrade
+one issue one command to do both okay okay yes
+one of the documents you said is uh uh you upgrade uh look two from db not one and then
+and also the other way around as well you want to upgrade that is manual method that is manual
+oh okay so we don't have to now bother about you know uh like uh once one node is finished
+then we'll run from this you know the second node so it will automatically pick it up
+yeah it will bring down the instances it will check the db
+training and all that stuff it will then bring down those instances and then it will start the
+upgrade bring up the db node start the instances then go to second node bring down the services
+start the upgrade and bring it up and do the health checks that's everything is taken care by
+this okay oh that's good okay so i have a previous job id uh which we used for the db node grade
+basically but just to give you the overview how it looks like when we see the progress
+so coming from here uh it will give you the log file path request id when it has been started
+uh it does have in time as well and the total time how much time it took so patrick uh if you
+you know want to know for the db node how much it took time for this two node cluster it took
+around five hours for this case this is for upgrade or this is for analyze this is for the upgrade
+that's why i was wondering with analyze two five and a half uh no no so this is a puppy when you
+say five hours is uh you know um both for both both notes or one note yes both okay all right
+cool i think last time it used to be about six hours right yeah in the table you can see that
+both nodes are listed in the name to a cfcld zero zero two one one then cfcld zero zero two two all
+succeed so so basically uh just to give a overview uh
+during the upgrade also it does the pretext that's how you see here the custom pretext
+it says 60 days then it should have been in the order i guess uh but yeah it does the pretext okay
+then it does the gi pretext which is related to you know the board and instances then it does the
+cleanup the actual upgrade in that stage it will check the gi versions and other things uh under
+to answer your question okay okay and then it does the custom post text
+like everything is upgraded successfully so this is how uh it looks like uh
+and the only difference for the analysis which i'll show you in a few minutes
+let's you know that let the progress happen for the previous job
+so you will not see these things to the post you know the upgrade and the custom postage
+so let me see if that's okay okay okay yeah it has started uh you see here it says the custom
+feature it succeeded then it has started the cleanup and then it will go to the next step
+which is like the pretext uh okay so this is how come the upgrade for the first one is zero
+minute zero second for the trend 21. you mean this one up a little bit um
+move up a little bit there's uh there's a slap uh last time right
+yeah that's the upgrade on the first line is the upgrade is zero
+for 21. oh you mean this one yeah that's uh no move down a little bit to upgrade
+is zero okay i think that's the one okay i think this note was uh
+uh you know already upgraded uh that's that's the reason it's showing you
+yeah this is why i decided to skip it okay that's why you were saying
+okay
+let's start doesn't like uh add up five hours isn't it
+oh pretty much okay including you know the service page
+there are pretty many push notes you can do in the broad deve elf
+in the their list list
+right
+one probably one was on children exit yeah Patrick the thing is that we
+started on Monday or Tuesday all right right maybe this cluster got
+failed after upgrading one node and then ratio fixed and then we kicked off again
+so again so there's no problem for child X and I dot do dot X to coexist yeah it
+should not run for I mean for weeks or something but yeah so far we haven't
+seen any issues
+the elapsed time here for the different sections you know does not add up to the
+five hours right in total
+I have not manually calculated this but yes it adds the last time because we see
+here they start time and the in time I think this is the difference of the
+elapsed time because I'm seeing it around the three and a four hours but
+yeah maybe you can check later yeah I can take that okay okay so now the we
+have seen the analysis of the elapsed time we have seen the analysis of the
+the elapsed time we have seen the analysis of the elapsed time we have seen the analysis of the
+analyze partial right so this is how it looks like the custom pre text and the
+cleanup and for the both notes it will so on so here see the cleanup also done
+succeeded now it has moved to the next three takes it was here right in the
+clean up is started next you see the cleanup has been succeeded next three
+takes exactly so this is how it will happen for another node once the second
+node is done this is how the analyze will happen okay for the upgrade the
+the similar way only difference is uh here we will not use you know the
+analyze method and analyze flag we will remove this
+one yes same like uh for cells
+so this is what the difference uh and uh for the analyze and the dd9 is
+well and previously i was showing you how the excel upgrades was you know
+look like so we have seen the additional things
+upgraded and the system was
+okay any questions so far please
+okay fine uh hey um
+no i i i wanted to raise a different question not really
+relating to you know this zbt upgrade process right but you know
+i i think the one of the reason namachi's on this call is you know
+basically you know i i don't know whether you saw
+the email um that um we sent you know last night
+right but basically we will trying to work with raja and
+namachi right to look at the the em volume alert and where we can
+reduce right and we found out that there are two you know uh em alert one
+is basically far system space alert right and the
+other one is ntp
+you know sync alert and we noticed that you know um
+we're getting about four to five thousand right um
+yeah we've been completely aware of that issue for ntp
+reason being that ntp service has changed to
+you know well seven from ntp no no that yeah
+there is one issue but i think uh you know before this upgrade right
+in the past three months we also do see you know ntp singular which
+which comes and then they auto close right after the work you know so
+so that there are two issues as far as ntp right one is the one that you talk
+about just now right but the other one is that you know
+during the exact vt upgrade or db node upgrade right there are two things you
+observe one is you know the the far system space alert
+right and the other one is the ntp sync alert right with the older version
+where it comes and they auto close right so
+question right really is that um is there any blackout set up for
+not alerting for these two areas okay there are two things to this
+one one is yes the blackouts are set as part of
+the upgrade process of analyze only when we kick off the upgrade the blackout
+is set by the zdt tool itself but at this time those blackouts are not
+working as expected that is already been raised to the
+gdt team and they are working on that one
+they probably put some work around into it somewhere it's i think
+uh working maybe somewhere it's not working
+this was so they're still checking on that is still work in progress
+second thing on the ntp thing the ntp the thing is that after the upgrade is
+done and then blackouts got removed
+automatically then it will throw the error of ntp if
+it is not in sync now at this time it will even if it is
+in sync it will still throw the error because the service's name is changed
+that is already been worked out by em team they are going to implement the
+feature today i think uh yes i i think that the second issue i'm aware because
+you know uh those
+those uh esr is not close right because of the
+problem with the new version right so those i know and and i know the em has a
+bug to resolve this right but the other two right you know um
+you know because we can during the upgrade i don't think we get any issues
+during the upgrade for ntp because if blackout is in place so that is being
+worked on another thing is the file system issue there again there are two
+things to it if it is in blackout we won't get the issue
+issues but if the blackout is not working
+so then we will get the alerts for the file system ones so so
+so maybe i suggest this right down to discuss this on on this call with so many
+people maybe you know namachi and and rb right um
+you know can sync up on you know those alerts that we saw right uh
+you mentioned that you know the zbt is working on the blackout to resolve the
+blackout issue yeah yeah okay so once we get from them that okay now the the
+it's fixed and we also see that okay we are not getting any alerts because we
+are getting unreachable alerts also even the database team are getting their
+their alerts as well that instance is down or something
+when we are upgrading so that yeah if you are okay right i'll get
+namachi to touch base with rb just to make sure that we are on the same page
+as far as the right and and if if what you're saying is that if the
+blackout works then you know all these alerts should go away right yeah yeah
+this time it's work in progress we are aware of this issue with the blackout
+thing so i think once we get permission from the
+problem is fixed okay okay so other other question
+pina case does it does this process
+write files to you know say slash or slash where or something yes it does
+yeah yeah it does what is the size of those files
+i'm not sure of the size of the files but it does the cleanup also after the
+updates are done um okay okay
+that's why we get done yeah that's right yeah and and that's why if we if we can
+get the blackout to work right then at least we'll reduce you know all these
+four five thousand alerts you know that we get
+but they should have been coming since tuesday only if we are getting
+no we uh we analyzed the past three months uh
+uh pinaxola i say right there there are three things right one is
+far system space alert right uh and then second one is
+the older version and tt sync alert right and and those auto clothes right
+after the upgrade is done and the third one is
+the one that you just described by the new
+new version of ol7 right uh that we need to change it to
+use the new you know yeah
+yeah these alerts should have been coming from 23rd july onwards
+yeah if it comes before 23rd july then it's probably some other reason yep yep uh
+i i think i i did notice that 23rd you know
+onwards right with the new version uh so so yeah uh
+namachi if you can sync up with um with rb
+just to make sure that we're on the same page for the file system and the mtp
+stuff okay this is actually uh running for a
+very long days it seems uh um i have seen this mtp sync issue occurs
+for a few still a couple of months maybe even six months around
+whenever after
+they didn't whenever they accidentally know the reboots
+were happening six months before namachi so that's what i am trying to say that
+if it is happening before these 23rd then it's not due to the grades maybe
+some other reasons behind it yeah you know yeah
+because we did a lot of those um you know fixes remember the the
+vulnerability fixes in the previous couple of months right so
+so we did notice right over the three months we have space alert as well
+as you know uh mtp so uh let namachi sync up with rb right
+we just want to make sure but yeah i mean uh since we are
+moving to the other service name and the bug fixes are being applied so probably
+it would be best that after the grades we analyze the
+data i mean um since we are moving away from the
+service name also and fix is being applied
+so that would be the ideal way i think to troubleshoot things rather than going
+into the past data which we is probably well
+we we we just want to make sure we have closure as far as the blackout
+uh issue that you guys are working on with uh the sc team right
+yeah sure advice this activity process and okay so
+so yeah i uh namachi uh if if you can call me later regarding the network
+interface stuff you know i um i'll talk to you who
+you know we need to reach out to like to look at
+the interval if you don't mind sure sure project one question about pinak so the
+next round of upgrades for the 600 plus uh
+accelerator clusters
+and uh was it using the zdt tool or
+okay okay and that was in the last four or five months or
+what was the time frame i think couple of months back only we did it
+uh
+yeah so it's uh probably we did in uh april
+two three months i think yeah
+yeah we did okay i'll find that yeah
+maybe
+sorry even we can try uh notice from here onwards
+at least uh any ntp sync comes after any zdt upgrade we can
+have a watch out uh apart from this crony
+ol7 leaving that if any other ntp sync if it is coming after this
+is it the upgrade kind of we can watch out thanks but however we look thanks
+okay i'll just cover a few of the things
+post upgrade uh which is uh or the analyzed ones which is
+sort of work rounds given to us not a not a
+fix i i would say so abhimanyu you can stop your screen and then i'll share my
+screen
+online
+yeah
+.
+so you guys can see my screen so this is our main conference for x
+excited upgrade 1923 upgrade which we are doing so
+the way we are moving so in the past we have been
+doing upgrades based on colos so the data was
+created using colos and then we used to kick off
+the upgrades and the regions wise as in the windows as we know that in the
+mldc is 19pt and emia once 13pt and apac was 5pd that's how
+we were upgrading but this time we are dependent on gi
+upgrade gi is one of the components on the database
+called grid infrastructure it should be on 12.2 which we have been talking about
+before we can upgrade to db nodes to this one and cell nodes from this one
+so this was the page for the cell nodes which we did
+uh
+so to answer your question uh raja we ended on july 7th we
+started on may 19th and we ended on july 7th for those cell node upgrades this
+was a tracker here and uh so this is the page
+now we started with only one slot so far last week
+which was this uh slot 104 and which was comprising 40 clusters
+this is the page for db nodes and then we are
+starting with now slot 101 for another 48 clusters
+and analyze is being kicked off for these all clusters
+so it's all these slots were made by a provisioning team
+based on their plan and then we are just using those
+slots for upgrades and same with cell node upgrades
+as we fix the the db node upgrades thing then we will move
+for the cell nodes now the custom things which i'll like to
+discuss on is this mentioned in the common issues
+instructions first thing is that as a pre-request
+like sp should be more than less than 30 days of uptime
+same thing is that the mc version of all accelerator should be on this today
+dot eight hyphen two i think is the version
+maxim is on two dot seven so we have to upgrade the m collective first
+using this script
+provided by scotty's team automation team
+it will not just upgrade the m collective it will
+also upgrade other ruby packages as well now another thing which we are coming
+across during analyzed checks is that all analyze
+fails stating that we have custom rpms installed on our exa datas custom rpms
+are the rpms which are not part of the iso image
+exadata those can be our power broker packages
+editor packages to name a few some some other exa
+aps b apps created the the older aps team created some packages and installed
+on the exa datas so those are the things which with rpms
+are installed on it now a lot of rpms are whitelisted some
+of the rpms we have to remove before analyze can be we can have a
+clean and on this so once those packages are removed
+then after the upgrade is done we have to install the rpms manually
+which is listed in
+uh under fs red mean under this directory
+now in the first iteration in pilot tests of three four clusters we were
+just checking what are those rpms which we
+need to install and get and get it posted over here but now this
+is the script is created
+and it is put as part of the this script is created and given to
+uh the zd team and they have been incorporated into the
+upgrade process only so we don't need to run any manual rpm installations
+but in case some upgrade fails at post upgrade
+so this script won't get executed and then we have to
+do it manually if you don't run this script
+then you won't be able to log in using ldap because with
+ol7 ldap config is using
+ssd instead of nsd table so this needs to be changed in ldap
+config this is for the authentication purposes
+then there is another thing which we have to run this is for nproc limits
+which we have to run before the upgrade so this is also mentioned then for ntp
+alerts
+since the em alerts we can't be dependent on the
+em because it will fail so there is a script which will check
+if there is any time lag or not using the crony service
+so these are the main i mean these things which we have to do
+after the before or after the updates so as we progress further then that these
+tweaks will be put in place in the in the upgrade
+process itself automatically purchased to let you know that this is
+some of the manual stuff which we are doing at the moment
+any any questions uh guys
+uh whatever upgrades we are going to update here after all we'll move to ol7
+is it happening i'm sorry i didn't get your question
+what do you mean by it's here after everything will go to l7 is it yes
+okay so this version 19.2.3 is ol7 based version
+okay
+okay once we are done with the image upgrade then the database team will be
+upgrading the databases to 19c that's the target
+okay so other things are this conference of what abhimanyu was showing that sop
+we will be publishing that sop through through this page only we will be
+going out to this page which is very likely oh i許le in the background
+but in this case
+see
+and
+so
+access to the servers they do their issues and then they go to a city on
+that so connect those guys are 24 by 7 right yeah yeah okay so any question
+guys so we will i think uh you guys can you start yeah go ahead can i share that how we can
+i'm sorry say again start upgrade using those
+ah the script one yeah you can show the script so the guys the to make things easier
+or whatever config files are being created in other steps abhimanyu has created the script
+for both analyze and upgrade both cell and database so you can uh show the script also
+so what script will do is it will create the config files in the directory automatically
+it will kick off the analyze also it will show the command which is to be there for monitoring
+purposes and everything
+just have to copy and paste the command and then you will be able to all second monitor
+even that all pod info that stuff also will be taken care by the script yeah so
+okay so what you need to do is we just need to prepare you know our which host we are going
+to upgrade so i just know uh the script was created for the cell and the db both uh but for
+then the db uh you know so one more question sorry this is a slash file system for actually
+a b or somebody uh any possibility which fills uh kind of during upgrade uh which caused this
+slash file system phone take it offline yeah sure to get the info it's fine yeah thanks
+thank you
+so for this uh
+this is a strip location in chicago and it will be you know everywhere in the same location so
+i'm just running it without any flags so it will just give you the idea what what what flag we can
+use it so basically for the analyte just use hyphen a or uh hyphen hyphen analyte and for the
+grade hyphen so you or hyphen hyphen upgrade we can also monitor the you know our request id like
+you know ever we used to do them manually
+but using uh this is we can monitor you know multiple jobs together as well
+okay so as pinag was saying uh this will create the configuration file you know then use those
+configuration files for the upgrades and initiate the upgrade and it will give you the request id
+for the each cluster and for the db node it will also add the as called the info entry automatically
+okay so i have one cluster uh for the analyze i'll just use it
+and you know this will automatically create uh the directory based on your uid
+and the date okay so if you're doing something else you'll see here your uid and the today's date
+okay uh i have a database node here 95 and 96.
+uh so you're just
+putting comma separators value uh i mean just the thought name
+we don't need to put here the fqdn
+okay if you have you know the second set of cluster you can put in the next line and so
+so like that it will work on so but always uh please put you know one cluster in one line itself
+otherwise it will not it will be a problem okay just to save the data just pressing on the ctrl d
+uh it will show you uh you know
+you have put your primary node is this and secondary node is this okay then it will also
+tell you you know for which version this upgrade or analyze is going to happen okay so as we have
+started for the analyze it is asking for the you know the confirmation if you feel you know
+something is went wrong or you have entered somehow the wrong hosting just enter n okay
+so it will not move on so i'm not i'm just using here the yes giving the indication to go ahead uh
+and see here now it has started updating the all pod info for this cluster
+suppose we have multiple cluster it will do for the multiple servers okay now it is showing us
+like the db node analyze command so the primary node is this it has automatically formed the
+command and it is now initiating uh running the command for the analyze and we see here the analyze
+all the configuration files i'll show you whether where it has been you know created
+this process will go on but meanwhile let me show you the configuration file it has created
+see here this has automatically created the configuration file we just had to put the host
+name and i'll go to this directory and it will have some more details uh which i'll just succeed
+okay so basically we see uh our host uh 95 uh it is the configuration file is created
+then we are seeing you know uh the command which is basically we saw here on the
+screen this will also list out here uh
+so we can see here uh it has not you know updated
+the reason is uh the process is not finished here yet but it will come up
+so once it's finished uh we will see and we will see we are seeing here the different files created
+like the this this file will have all the deep analyze dd commands
+this file will have all you know the request id for each cluster
+yes for the previous one it is there the new one will be updated as well then
+let's consider we are you know running the upgrade also we will see here the upgrade
+command and the upgrade request id we will also see uh what all nodes what nodes we have entered
+so it will you know automatically form the student for that
+okay i think this is finished here so here you see uh uh this is for the previous job id okay
+so not to bother about this because uh we are using the same directory so we used to
+use the same directory for the previous job id so it is just showing you the this job was also
+run today but we entered here the 95 post so for that we have got the request id automatically
+and uh these things will you know tell us uh what our the logs which i was talking here right so
+these files part and location what is there okay so let's consider our analyze this you know
+started now if i have to monitor it okay so just use iphone m
+i'm just monitoring the previous one
+uh i think that was for the okay let's monitor this one
+just give the request id if you want to give them you know the other request id again just give it
+and control d uh it will show you you know the job id which you have mentioned it will save it here
+okay and you see here so for the 95 one this has started and it is still running the previous one
+which i started
+which that also i wanted to monitor now and that is showing you know the completed
+activity so basically it will give you the start information whether you know job is actually
+completed or free if it is failed then you can have a you know the actual progress report and see
+and in the logs directly like how it is done so this is how it is uh and for the upgrade
+uh it will be again just uh hyphen new option that's it
+so any questions for this
+yeah we have created a conference also to use the script so the guys can go through that and
+probably run this script when they are running an analyze for cells or dvs
+so you don't have to do manually create the configuration file
+so
+we just plug it into your directory and it will show you the
+equivalent of killing and the
+table image value frame okay so everyone you can send out the confidence pages for
+to the team over part of this invite and they can go through that
+yeah i'll do it and the hoop also
+finalized people are still checking if there are any tweaks to be done so we
+will publish in the same conference which I was showing you the our master
+conference for the page if no questions I think we can wrap it up and guys can
+you can bring up even new Rishi Kant or more if you have any queries or current
+also great session I'll be when you and Pinnock thanks for that very useful
+thank you
+yeah thanks my

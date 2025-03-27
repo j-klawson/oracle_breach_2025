@@ -1,0 +1,962 @@
+start	end	text
+0	13680	I'll just start it with the project hello everyone yeah can you hear us we
+13680	32220	know yeah it's fine thank you good morning good afternoon everyone I'll be
+32220	40380	sharing the details you know about how we are starting well now then big you
+40380	43540	know then alive and that's great I'll also you know
+43540	48940	focus on how we start in you know some of the pieces which we take care before
+48940	56200	the Excel analyze and then how we pick off the analyze and update using manual
+56200	65800	method also using some of this so we have couple of constraints which I just
+65800	72440	share the link and the details are mentioned there but again some of the
+72440	73520	process you
+73520	80060	you know it will get things out anymore decision she but again бытьwind metiful
+80060	82520	know so
+84600	91200	two things first things which we are doing is we are going to upgrade this
+91200	99460	time while cell and devices to the 19.2 version so it is this data image version
+99460	103340	of your 19.2 few months and one or two months later we will be�
+103340	103520	uh t outra...
+103520	110880	back we did another play to twelve point dot dot eight but again we need to
+110880	121280	upgrade and tell and dv4 I just know it's going on I have two three servers
+121280	129140	to say if I have it so you know what all commands we do what all pieces we run
+129140	136700	for that the first thing which we do is we take the item of time I know what
+136700	143920	time should be you know less than 30 days otherwise our analyze will fail so
+143920	150080	in in this case suppose for the best practice we usually run humanized at
+150080	157280	least one week in advance so let's consider you know our island of 10 is 25
+157280	159140	days now and
+159140	164600	our upgrade is going to be scheduled in the next week so by the next week I know
+164600	169960	of time will be you know more than 30 days so in those cases if you see you
+169960	175800	know on an average item of time is more than 30 20 days you may reset dial ohm
+175800	181040	not a problem but if you're still sure like you know you'll be a plane tomorrow
+181040	189080	day after tomorrow not needed so I am NOT visiting the I know no as you know
+189080	193560	the commands are mentioned here it will be working fine not a problem the first
+193560	199200	thing is here we can see up time and then the second one is it will reset
+199200	206360	dialogue once I don't reset is done we can you know again take the off time but
+206360	213440	some of the situations here like I'll just show you on my screen here we see
+213440	218540	the I know much that is not working so this is what I have learned now like for
+218540	228440	example you know most of the server systems dial on it is let's let's not
+228440	239240	highlight the thing where it's not working go with the ideal so another
+239240	246780	command is to take the so faulty which will start false mention you know in this
+246780	248540	you know then I know
+248540	256260	except the disk thing the next command will need to take the physical disk
+256260	262560	status for the cell and the DB as well so it will see whether you know this is
+262560	270640	in the normal or the failed status or in any other like in the predictive failure
+270640	278440	for the physical disk also we can see whether it is you know particularly failed or not
+278540	291500	and this one is also important sometime you know we might not get into faulty or in the
+291500	298600	disk but this tech hardware profile will list out all hardware faulty using this
+298600	308260	command okay one of the best practice also we follow is we take the alert history in some cases you'll see
+308540	314540	there there are alert history but even though it is already cleared and not cleared I mean
+314540	320000	the actual error is fixed that we need to see whether it is really fixed or not that
+320000	328100	you can get it in hardware tech profile or any other this is also important to
+328100	333220	take the critical error in the alert history so this is this command will give you the
+333220	338420	critical alert history if at all you need to drop the alert history
+338540	345360	in case the fix has been applied and you're still seeing the alert history please drop
+345360	353360	this using this one okay recently we encountered one bug where you know if there is a you know
+353360	361240	this is 8 terabytes or 10 terabytes we were asked not to you can skip this one abhimanyu
+361240	368540	it's not applied to the 19.2.3 version okay fine so similar pretext is for the alert history
+368540	372400	yeah and so you can check just line of top last time here it is 90� 01 00 which we
+372400	372460	don't like but yes i will explain to you how you can
+372460	378240	And finally to this look like total error I apologize I was doing some basting
+378480	384420	But run on over the division on Sunday so now I'll be showing you how we
+384540	387720	Apparently doing other than analyze or the being alive I'll show you both
+387720	398360	Before before abhimanyu runs the analyze I'll just brief that the process or the flow
+398540	404840	we go through so these upgrades are divided into two parts one is the pre
+404840	410420	check which we call as analyze checks second one is actual upgrade in the
+410420	417120	analyze checks it will do the analysis of both hardware and software everything
+417120	423300	that the cluster is healthy and ready for upgrade now this analyze process
+423300	428020	when we kick off it takes around one hour for each cluster so to minimize
+428020	432560	that thing that okay we can just instead of running analyze and get the hardware
+432560	438160	issues from there will be running hardware checks ourselves first which I
+438160	443520	be when you showed those commands of resetting the SP or the alert history
+443520	448660	and all that so we can check the hardware stuff in that those using those
+448660	453120	commands itself which we can do it in probably 15-20 minutes per cluster and
+453300	457920	then raise the MOS cases get the hardware fixed once the hardware is
+457920	463320	fixed then we can run the actual analyze which will actually still have those the
+463320	468200	disks issues or other hardware faults won't be coming and analyze and will be
+468200	472860	just the other issues which we highlighted but since okay the one thing
+472860	476380	is that we can use show faulty which everyone knows that using show faulty you
+476380	480480	can see the hardware issues but show faulty will never tell you the disk
+480480	483120	issues or disk issues we use those
+483300	487960	issues so after all these issues are fixed and then we run the actual
+487960	492660	analyze which is for both cell and DB this is there is called cell cli utility
+492660	498000	for the piece it's dBM cli utility if everyone you can scroll up those
+498000	503600	commands are listed everyone can see that so you can see that for basically
+503600	508300	for discs we are running different commands to get the disk issues because
+508300	513000	disk issues won't be listed in show faulty output so after these hardware
+513300	522900	analyze which abhimanyu is going to show you thank you so yes we run the analyze on the respective
+522900	530740	gdt servers and gdt as you aware it stands for the zero downtime and so you know developed by the
+530740	537940	you know you can say the software engineering team so there is a constant space for the as
+537940	542180	everyone aware where every gdt server is listed out
+545700	552580	show you okay this is one so if you search here the gdt you will get it for
+552580	559380	each color there is one more page maintained by the dba team that also i can share with me
+561460	566340	okay so i have logged into the chicago gdt server already
+567780	567940	and
+567940	578180	usually our path for the upgrade will be this one where the clm
+578180	584820	they call it the clm cli utility uh which has been you know the configured on this part
+585540	591940	okay so for the best practice uh you know as there will be multiple servers involved
+591940	597780	we should have your our own directory uh where we'll be usually you know keeping the
+597780	604340	server configuration file and the other details you can also have in that in this directory like
+604340	610260	you see here uh someone has already created the configuration file but it does not harm it's okay
+611460	617780	if you are not comfortable you can have your own uh subdirectory and then uh when the analyzing
+620180	627620	so what i'll do is i'll use this uh directory only for now and then create configuration
+627620	641140	file and uh tick off the analyze manually
+641140	653140	so
+653140	657460	how do you create the config files for each host uh sorry you missed that
+657460	659000	yes i'll just
+659000	665760	it's manual just just go into the working directory and then we just vi an empty
+666500	672500	file and put the contents in it okay so so module
+672500	673380	maybe
+673380	674340	ah
+674340	678180	i have just done you know the vi and i have basically given this
+678180	682220	question and this is the host name the primary data and this is the main
+682220	683280	code number
+685220	687220	and uh we need to have
+687220	687300	we need to have
+687300	687380	and uh we need to have
+687380	687460	and we need to have
+687460	696160	this content so the first line is the host is okay and after equal to we
+696160	700780	should have the excel host name which for which the cell upgrade you know we
+700780	709000	are going to perform so we have a you know recommendation to use only one host
+709000	715720	primary DB node name for you know each configuration as it will help us you
+715720	720840	know just to view and monitor our upgrade but if somebody is comfortable
+720840	728600	they can have the more host also here in you know the coma separator value so so
+728600	733300	what abhimanyu saying that we can kick off analyze using one configuration file
+733300	738080	on multiple clusters also so but recommendation is that we put only one
+738080	743200	cluster because then log will be created one file only it will be difficult for
+743200	745600	us to to troubleshoot if some failures are
+745600	745680	going to happen so that's why we are going to do that so that's why we are
+745680	745720	going to do that so that's why we are going to do that so that's why we are
+745720	745840	going to do that so that's why we are going to do that so that's why we do that
+745840	750760	the curse for both the clusters or something since it's good to use only
+750760	756340	one fine as well you can just put one cluster name only so in this case this is
+756340	760300	the cutting is there one question so p情 syndrome percent is then going to
+760300	766800	omit now well keep simple and only one time you did you know okay the second
+766800	773640	line is the path directory so now we are going to use this back to for this
+773640	775520	version as I see for the Bank so the link for go toward there is a path
+775520	775680	directory for this version as it is for the tank so it is the path directory so
+775680	781360	to you will see the cell and this is this can be anything in the profession admin but we are
+781360	786880	going to follow the standard directory where our patch is copied as it will fail and the last one
+786880	793920	is very important uh the target version so target version which we have mentioned here is the 19.2
+793920	802480	so just save this file okay so now i have the contents of the the this uh patches directory
+802480	812480	also oh yes okay so here we can see uh this is for the cell i'll show you the overall
+814400	820800	okay so overall you will see the for the db as well and then the last one let me see for the db
+822160	824320	so db you are seeing the two patches
+826880	832320	so these are just iso files in in the zip files if you guys know like manual upgrades
+832480	836160	you have done so it's the same those files which we use for manual upgrades also
+836800	841920	using patches here so it's the same thing that we don't go into all seven directory
+846160	854080	okay now uh in the configuration is ready here if you see i'll be starting the analyze for this
+856480	860080	okay i have command prepared for this
+862480	873760	uh i'll be manual can you just uh go back to the previous um uh the config file screen
+874640	881680	because um in in the host in the host list uh you mentioned that it is for the db note isn't it
+881680	885840	it is for cf cldx0013 right
+887600	892320	directory you specify it's for cell but it is for the db note isn't it
+893040	900640	uh let's see uh hold on a minute so uh frankie if you have done any celebrating the celebration
+900640	907440	from the db node only it's not directly kicked off on any cellular all all the all the celebrates
+907440	913920	are to be kicked off from primary db node from a db yep there is such equivalent setup for all
+913920	922480	cells and okay picked up so that the host list is referred to the uh the analyze on the uh issue bd
+922480	927200	the cell no isn't it because we're doing the cell right because the patch directory is for the cell
+928480	934560	no it's not that it's it's uh we are putting the host as a primary db node from where the
+934560	942560	cell upgrade will be kicked off yeah or how we will be telling that it's going to be cell upgrade
+942560	947520	you will not come to know once we kick off the command it will be for sure that's how it will
+947520	954000	be kicked off so all right in addition to what pinak said uh basically the patch manager is you
+954000	959600	know the process which actually upgrades the cell and the db which basically runs on the primary db
+959600	975040	node okay so next command will give you the clear picture frankie okay okay i have command ready
+977520	985200	to run the db uh okay i'll see uh what all clicks it is uh as this is the path for the clm cli okay
+986320	990320	so basically this is nothing but you know my current working direction
+992880	998800	and the second i'm not sure have you mentioned that this is being run as mc user
+1001520	1004960	no i did not mention but this is mandatory to run it as mc
+1006080	1006480	login
+1007520	1016560	become mc user yes thank you and uh as this is you know you will see here the difference between
+1016560	1023440	analyze and update so for analyze this is mandatory and analyze if you skip this analyze
+1024160	1030720	it will basically upgrade it okay so we need to be very careful uh for the you know analyze and
+1030720	1037120	update so and then hyphen hyphen analyze it should be rest all so before you can even analyze this
+1038160	1044640	you want to remember that the upgrade needs to be written which you have written clm cli upgrade
+1046480	1051920	yes yes okay okay otherwise you know this what i have done is i have given the full path
+1052560	1058720	so here you can omit the full part also we can also use dot clm like this
+1059520	1064320	okay but as we will be working on from the other directory or sub directory then full path we need
+1064320	1067360	to mention it on so that's why i have mentioned there
+1067520	1075820	okay so then as this is for the cell node so here we are mentioning this cell
+1075820	1079640	typically for this is here the difference would be whether we are
+1079640	1091140	running for cell or database okay again this is next one is the config file
+1091140	1095580	hyphen-hyphen config file is in the path of the country file here this is
+1095580	1100380	mandatory to give the you know the full path you mean we have to give the
+1100380	1105780	produce path yes otherwise it's not going to you know take if you feel you
+1105780	1110340	are in your current directly anywhere and it will not take it on so there is a
+1110340	1118560	dependency this is how this has been developed okay next one is the request
+1118560	1123540	name so each you know analyze and upgrade will have the unique name and it
+1123540	1125580	can be maximum of 20 characters
+1125580	1134880	okay for the simplicity you know I have put a just for the analyze and then the
+1134880	1139800	host name and the version you know suppose sometime you will run like in a
+1139800	1145400	two times or three times so suppose I'm running for the first occurrence and I
+1145400	1150060	have used the one you can use your own you know the sort name or whatever it's
+1150060	1154920	fine but it has to be in itself this will not submit your you know the job
+1155580	1168180	I am just running now tell analysis it will take two three minutes usually to
+1168180	1172680	get the request ID see here you are think checking if this name is unique or
+1172680	1176220	not like like this it will take whether
+1176220	1181240	configuration file is proper or not and also it will show you workflows for the
+1181240	1185560	family if you you know notice like something went wrong you can
+1185580	1194700	to you know again interrupt this process fine now i have uh some request id uh which i already ran
+1195340	1200860	uh i'll show you uh you know how the actual uh when we get the request
+1200860	1204300	ready how it looks like and how we can you know monitor it
+1207340	1207840	okay
+1210220	1215180	so now i have logged in here in one of the you know the netherlands gbt server
+1215820	1218060	and again i am in the mc admin user
+1237020	1238540	so any questions so far guys
+1243420	1243900	it's okay
+1245580	1253580	no one has any questions
+1253580	1259580	no one has any questions
+1271820	1274620	if something has come okay
+1275580	1277580	no one has any questions
+1277580	1279580	no one has any questions
+1279580	1281580	so
+1281580	1283580	so
+1283580	1285580	so
+1285580	1287580	so
+1287580	1289580	so
+1289580	1291580	so
+1291580	1293580	so
+1293580	1295580	so
+1295580	1297580	so
+1297580	1299580	so
+1299580	1301580	so
+1301580	1303580	so
+1303580	1305580	so
+1305580	1323260	so so
+1323260	1325580	so
+1325580	1329500	so
+1329500	1329920	so
+1329920	1330700	um
+1330700	1330880	um
+1330880	1330940	so
+1330940	1331520	so
+1331520	1331780	um
+1331780	1333400	um
+1333400	1333680	and
+1333680	1333920	uh
+1333920	1334280	yeah
+1334280	1335580	i saw
+1335580	1343500	they were yeah there was some email or thing as well some forum anyway uh so what i'll do is
+1344380	1349420	has kicked off upgrades right in chicago so it should have been working yes it should have been
+1349420	1354540	working but uh we'll take with receipts you know it has interrupted his own job or not
+1356780	1362380	anyway i have some previous uh you know request id which i'll show you the only difference here
+1362380	1369420	is you'll get the request id okay so i i'll show you how the request id and how many digits it does
+1369420	1387180	have okay you will get the request id here you see the digits right so it will start with one five
+1387180	1392300	and it will be long digits so again to monitor the progress we have
+1392380	1396460	to be in the bin directory and then we can run this clm cli progress
+1397020	1402060	and report this in and last we'll have the unique request id which we are going to monitor
+1416220	1422140	okay now first thing we can look whether analyze is you know
+1422380	1430060	whether it is completed succeeded no error okay in this case this is idle and it looks clean okay
+1430060	1437980	but couple of things to notice here so we see here here like it does the custom pretext for
+1437980	1444140	this particular cell it does the pretext and the last it does the clean up okay so all will be
+1444140	1449500	succeeded succeeded it will this process will continue for the each cell from that particular
+1451020	1452220	so you you are seeing here
+1452380	1458220	you know all these uh cell nodes have these three steps like custom press pretext clean out
+1458780	1464780	and custom pretext and all are you know again set of multiple states and combined
+1468380	1475100	and if we see any failure you will see here the ot alert okay in this here we can you know
+1475900	1481340	take it on how does it look like as there is no you know errors you are not seeing you know
+1481900	1486860	anything here if it so usually you will see the path where you can get it on
+1488300	1490220	and then see what error it has been listed
+1492700	1493900	any questions for this
+1500540	1508140	okay oh this was for the analyze uh let's consider you know our analyze is success and
+1508140	1510860	it says succeeded and no errors we can
+1511340	1519180	uh plan it for the upgrade based on again the approvals and the jira fine for the cell upgrade
+1524700	1529500	i'm not switching off the upgrades but i'll show you how and what is the difference here
+1533260	1535660	our configuration file and everything is ready
+1535660	1546300	uh so guys guys interrupt uh where you have any questions so yep uh pinac i have one so uh what's
+1546300	1553820	the duration when we success succeeded with the analyze and and before we perform the self upgrades
+1553820	1560140	it takes around 45 minutes to one hour to run complete analyze yeah yeah um okay but but you
+1560140	1565020	know because analyze would be a you know a prerequisite before we do the self upgrade right
+1565660	1570460	what i'm trying to say is that you know what's the safe duration right between once we have a
+1570460	1574940	successful analyze and you know the next time we perform the self upgrade is this
+1575580	1582700	one day two days or yeah we actually start the analyze one week before to fix any issues which
+1582700	1590460	might come up so after after so but the way things are moving it's it's really i mean all
+1591100	1595100	the urgent ones so we are just getting in them finished two days before or something
+1595740	1601020	so if if one week before also analyze pass successfully so as a best practice we will run
+1601020	1608060	the analyzer again two days before just to see that how things are good all right cool thanks
+1610700	1616620	so this is the command which i have already prepared for the actual cell upgrade only
+1616620	1622300	distance here is the upgrade it does not have hyphen upon analyte if you see here the previous
+1622300	1625500	one does have hyphen upon analyte and what the actual upgrade you can see here is what the actual
+1625660	1631600	does not have the highest analysis so we just need to be careful that we are
+1631600	1636900	actually making you know either analyze or the upgrade so similarly we will get
+1636900	1643560	the request ID and in same way we can you know monitor our progress how it
+1643560	1648560	progresses and if there will be any failure again we can look for this OT
+1648560	1655060	alert log mentioned in this progress report and as everyone is aware we can
+1655060	1659560	you know check the cell version like this image in twice and version command
+1659560	1663840	it will show you whether how many servers are you know upgraded and how
+1663840	1672560	many pendants you can see also from this report as well so what what issues
+1672560	1681220	normally you face during pre-checks okay so during pre-checks there could be the
+1681220	1684300	hardware issues mainly
+1685060	1695460	hardware disk then CPU DIMM or power supply so it depends what what kind of
+1695460	1702200	hardware we have so major issues will be like that in case of cell
+1702200	1708820	sometimes the i-loam connectivity issues due to maybe if you reset the i-loam
+1708820	1714940	it may fix and different kind of you know fixes are there but yeah overall it is there okay so you
+1715060	1722920	initially started with running this you know commands to find faulty parts right
+1722920	1727840	you know on this so after that you do this pre-check so what's the difference
+1727840	1731200	it is just the orchestration to run across different nodes at one go or what
+1731200	1737800	is it yeah that's correct you know we can run and go and but it does have the
+1737800	1745060	additional you know command for the excel update like you know set of you know the
+1745060	1750280	multiple pre-tests not only hardware but it does have the software test also
+1750280	1756460	let's consider if you have RPM dependencies it needs to be removed so those kind of
+1756460	1766640	situations and it has multiple things to do okay got it so guys if cell analyze is
+1766640	1774180	clear I'll go ahead with how we you know do the DB analyze manually is this fine
+1774180	1774200	so guys if cell analyze is clear I'll go ahead with how we you know do the DB analyze manually is this fine
+1775060	1788340	yeah yeah you asking to run DB analyze I can so it is fine yeah we can run one
+1788340	1792680	cell analyzing some other side if Chicago one is not working but anyways
+1792680	1798480	I have asked finish team to to check on the Tomcat so let me first and so the
+1798480	1804180	DB analyze and will see if mean where it gets fixed or something okay DB analyze yeah DB analyze is fine
+1804180	1806420	Yeah, DBanalyze will take more time, right?
+1806420	1808420	Sanalyze is a more easy one.
+1808420	1814040	Anyway, it will, you know, kick off the job and I have previous Sanalyze ID so I can show
+1814040	1817040	you how it works.
+1817040	1818040	Okay.
+1818040	1828580	For a similar way as I have shown above for the DBanalyze, we do the...
+1828580	1830680	So one other thing, one other thing.
+1830680	1836440	So for 19.2.3 upgrade, there has to be some minimum version for grid, right?
+1836440	1838680	I think 12.2 or something like that.
+1838680	1839680	Yeah.
+1839680	1840680	12.2.
+1840680	1841680	12.2.
+1841680	1842680	Yeah.
+1842680	1843680	12.2.
+1843680	1845680	So is that validated during pre-checks?
+1845680	1846680	Yes.
+1846680	1847680	Yes.
+1847680	1851680	DBanalyze checks will error out if it's lower than 12.2.
+1851680	1852680	Okay.
+1852680	1853680	Okay.
+1853680	1854680	Okay.
+1854680	1855680	Thanks.
+1855680	1858680	And we have already upgraded these servers to 12.2.
+1858680	1859680	Okay.
+1859680	1860680	Okay.
+1860680	1861680	Thanks.
+1861680	1862680	Thanks.
+1862680	1867680	So for the DBanalyze itself, we have this DBNode features which I was talking earlier.
+1867680	1877680	Coming to how we actually run the DBanalyze, similarly we create a configuration file from
+1877680	1882340	the respective DDT server.
+1882340	1883680	Okay.
+1883680	1888440	So we have these three configuration files.
+1888440	1889440	Okay.
+1889440	1890440	Okay.
+1890440	1904560	okay there is a difference here uh if you see here the couple of extra lines are here
+1904560	1912380	okay so the difference start with the first one we have to put both the nodes of the cluster
+1912380	1920460	for db analysis right uh you're right and uh for two node cluster if you put just uh
+1920460	1926540	one node also it's fine but if it is a multiple then you have to uh add all nodes but in case
+1926540	1938660	of 12 node cluster are we putting all the yes please put all nodes for the best practices
+1938660	1942360	okay so no not not the odd ones or you mean
+1942360	1947980	all the nodes uh odd ones also will work but you know it is a tedious job to you know
+1947980	1953980	find out all odd nodes and then you know um put in the configuration so but uh as it is
+1953980	1958940	very easy to you know put all nodes together so i i'll say please put all nodes together
+1958940	1968180	not only the order it will not create any impact
+1968180	1971860	but when you say odd node are you talking about the primary node
+1971860	1972340	no
+1972340	1982020	Let's consider we have a 12 node in one cluster, so 1, 3, 5, 7, so what GDT consider is like
+1982020	1990100	all nodes is a primary DB node for them, for the GDT.
+1990100	1996180	Just to say more on the 12 node cluster thing, from the hardware point of view, it will look
+1996180	2003080	like it's just one rack, but it's logically split into multiple clusters of two node each.
+2003080	2008140	Like in 12 node cluster, when we say 12 node cluster, that means there are 12 XRata DB
+2008140	2013620	nodes in that rack, just single rack, which would mean that they are all logically split
+2013620	2016440	into six clusters of two node each.
+2016440	2020600	That's how the fusion architecture is.
+2020600	2024420	So then we will put all the nodes in that.
+2024420	2026180	Is it dependent on like, you know,
+2026180	2032140	the XRata shapes, like in half rack, full rack and all?
+2032140	2040040	In fusion, it's all full racks, there is no exception on that, it's all full racks.
+2040040	2046120	It's only in EM and IDM, we have quarter and half racks.
+2046120	2047120	Okay, got it.
+2047120	2055960	Okay, so again, the first, the host is on the DB node, and then the pack direct to the target
+2056180	2057180	node.
+2057180	2062180	The tracking bug is not mandatory, but again, let's have it, but we don't have any bugs
+2062180	2063180	this time.
+2063180	2064180	Okay.
+2064180	2071340	Then this is mandatory, pod suffix is equal to hyper MC, and then pod underscore failure
+2071340	2074820	thread, underscore threshold is equal to one.
+2074820	2080140	So this is, these three lines are addition to the, which we used to put in the cell.
+2080140	2081140	Okay.
+2081140	2086140	So this is the key difference in the DB node configuration and the cell node configuration.
+2086180	2087180	Okay.
+2087180	2090180	I'll just save it.
+2090180	2091180	Okay.
+2091180	2099680	So I have prepared the command for a DB node and I'll, okay, one more thing.
+2099680	2107180	The difference here is we also need when a script here is listed, add pod in this one.
+2107180	2108180	Okay.
+2108180	2114180	So what it does is it, you know, fusion team maintains the all pod information.
+2114180	2115180	Okay.
+2115180	2121180	It's associated with each DB node in one centralized location in a session admin.
+2121180	2128180	From there, it copies the pod information for that particular data node to the locally.
+2128180	2132180	Basically that local file will use for the upgrade purpose.
+2132180	2137180	So basically it uses like, you know, which database server is having what pod, because
+2137180	2141180	as you know, the automatic failover of the service happened.
+2141180	2144180	So it picks the, you know, the pod information from there as well.
+2144180	2149180	And then matches and do their calculations for that.
+2149180	2150180	Okay.
+2150180	2153180	So how we run this add pod into the test.
+2153180	2155180	It's very simple.
+2155180	2164180	It's just, you know, just mention, you know, all database nodes.
+2164180	2167180	So this script and this will go much separated.
+2167180	2172180	The CDN, we have to put it there.
+2172180	2173180	Okay.
+2173180	2178180	So it will just show you how this, you know, how many pods has been added, how many it
+2178180	2179180	has removed.
+2179180	2184180	Suppose there are some internal ports and all it will remove it.
+2184180	2185180	Yes.
+2185180	2190180	So the reason being why we adding is we need to have only the active ports listed into
+2190180	2197180	this so that the services can be failed over or stopped based on the active ports only.
+2197180	2201180	Because as we know that this is going to be all zero downtime.
+2201180	2202180	So we need to be sure that.
+2202180	2207180	Only the active ports are being running on these database nodes.
+2207180	2214180	That's the reason we running this script.
+2214180	2223180	If you don't do then our upgrade will not happen.
+2223180	2226180	And you can see here, it is copying, you know, the pod information from the backup and to
+2226180	2227180	the current one.
+2227180	2228180	So this is what it is.
+2228180	2229180	You can just list out the contents of this file.
+2229180	2230180	Just put it there.
+2230180	2231180	Okay.
+2231180	2245180	First name is the pod name and then the instance name and the node name.
+2245180	2253180	So this is the way it's listed there.
+2253180	2254180	Okay.
+2254180	2258180	Now the next, the DB node analysis.
+2258180	2260180	Tomcat is started now.
+2260180	2277060	so you can probably analyze for cell or database for this the key difference
+2277060	2283220	here is only defensive here the DB node if you see my screen here you for the
+2283220	2290600	value is to sell and here is DB node not DB but DB node okay rest all things are
+2290600	2300860	same okay again this name has to be unique so I'm just putting this now your
+2300860	2307160	request name can be anything as per your this thing is to identify your this is
+2307160	2312200	for the analyze for hyphenation analyzes you know carefully
+2313220	2327380	okay again this is taking the so apparently how this looks like so we
+2327380	2333040	were talking about we need to switch to the empty and this for admin user
+2337340	2342220	okay this is the full part where we
+2343220	2347720	can see these details mean what else will you how you can
+2347720	2348540	monitor I want
+2348540	2355880	to show a Engineeringto you how he said your request which will I see in the
+2355880	2361680	panel as well three for the request if this is which be in the system
+2362140	2366140	the какойs- assisting with me
+2367340	2371300	we kind of stack his with the click engines
+2371300	2371980	million how each one you feel oh you can monitor analyze say you got the request
+2371980	2372220	ID in the analyze command you showed that dense on the previous year let's wait for it should beами oh yeah I mean though yeah I mean the details urban banter is required
+2372220	2387220	Those are the details, you see here like NFS latency and all, sometimes if fsnadmin is slow or some other issues, you will see delay to get the request added but usually 5 minutes should be the max.
+2387220	2397220	It's heavily dependent on fsnadmin so everything is running out of there so the fsnadmin has to be healthy to run these things.
+2397220	2406220	You see here, this analyze is equal to true, right? So for upgrade you will see here the upgrade one.
+2406220	2415220	And it will also show you the log file while generating the request id.
+2415220	2425220	So if at all you see any issues during, you know, you are not getting the request id, you can have a look on this log file mention in the log file bar.
+2425220	2427220	Yes.
+2427220	2429220	The workflow here is the dbnode.
+2429220	2436220	It looks like, you know, there is some active job running for this.
+2436220	2442220	You ran multiple runs for the same?
+2442220	2445220	Maybe since from morning it is running on.
+2445220	2450220	But again, this has given us the request id which was running on.
+2450220	2457220	Okay, yeah, so in case there are duplicate ones, it will show you which request id is already running.
+2457220	2460220	So here you can see we got the request id.
+2460220	2461220	Yes.
+2461220	2476220	So let me just show you how we can monitor this.
+2476220	2484220	So actually from the notepad, sorry, wordpad, this hyphen hyphens comes, that's why.
+2484220	2485220	Yeah.
+2485220	2486220	Yeah.
+2486220	2489220	Okay.
+2489220	2495220	So here, this is running the analyze.
+2495220	2496220	From top?
+2496220	2499220	Yes.
+2499220	2501220	Okay.
+2501220	2509220	So again, this is the log file part when the request id.
+2509220	2512220	And we see here the status.
+2512220	2514220	This is running on.
+2514220	2519960	this is also listed your request ID in the unique name if you have given when
+2519960	2526120	it start time so once it's finished you will get the end time also there as of
+2526120	2536460	now itself so so the analyzer is running on all cells as you can see in the
+2536460	2549800	source output yes and also we can see here in the job one so this has not given a
+2549800	2556000	appointment and again we can always go to the first
+2556000	2564260	forgotten viruses happening here so there are two log log files which are important
+2564260	2565680	one is this alert lock
+2565680	2566440	each value pratik
+2566440	2573240	this is log directory in which or other logs will be there right yes yes so just this is one
+2574120	2579880	okay here we will see dialect log and this thing another will be under you know
+2581080	2583960	logs one will be protocol
+2588520	2592200	so you can verify with sop it should be there right oh yes
+2592200	2601720	okay so one one you know when i actually before so if you go here again the request you will see
+2601720	2610200	here yeah so these things will help us to uh you know check what all issues are there also if
+2610200	2616920	the bug team or specific marks for any log we can give it from here which file you will check on
+2616920	2621560	this in this time everyone so it does have you know uh
+2622280	2630200	under the and basically we dip it and then tar it and give it to them okay okay so yeah so when
+2630200	2637240	when we go to the next level of these teams cloud ops tech or sc team they will ask certain files
+2637240	2647480	from these directories which we provide them when we file the bug yeah okay now uh for
+2651400	2651880	let me
+2652200	2654760	run db analyst for some other cluster maybe
+2660920	2665720	pinac i have a question right so um you know from what i know the cell will take about
+2665720	2670440	two hours right for itself to be upgraded so how frequent would the fs
+2670440	2677160	uh scf to check uh the logs for issues it takes for one cell it takes around one hour
+2679000	2682120	okay so so how frequent with the scf to check
+2682200	2687880	write the locks for errors and so on it's i mean abhimanyu can tell because
+2687880	2692920	they are the ones okay for you know cell upgrade
+2692920	2697720	uh you know there was not many issues it's uh only you know there was a
+2697720	2702440	problem with the grid disk but that was for the 12.2 version okay
+2702440	2705960	usually uh you know half an hour will be idle
+2705960	2711720	uh so it will be fine half an hour should be good i think yeah
+2711720	2717000	for the cell okay yeah no i was just thinking you know
+2717000	2719560	if the s shape is be sitting on the screen and
+2719560	2723960	you know checking no not because
+2726440	2729720	okay so half an hour is is probably a good uh
+2729720	2734200	yes yeah okay yes but we are hoping you know this time
+2734200	2741640	if those known issues does not come maybe we don't have to do that frequently
+2741720	2755720	i will just change the whole thing here
+2764760	2769720	so i'm picking the another cluster here
+2771720	2773720	um
+2773720	2775720	so
+2775720	2777720	i'm not sure
+2777720	2779720	um
+2779720	2781720	i'm not sure
+2781720	2783720	um
+2783720	2785720	um
+2785720	2787720	um
+2787720	2789720	um
+2789720	2791720	um
+2791720	2793720	um
+2793720	2795720	um
+2795720	2797720	um
+2797720	2799720	um
+2799720	2801720	um
+2801720	2807720	um
+2811720	2813720	um
+2813720	2815720	um
+2815720	2817720	um
+2817720	2819720	um
+2819720	2821720	um
+2821720	2823720	um
+2823720	2825720	um
+2825720	2827720	oh
+2827720	2829720	oh
+2829720	2831640	okay you created a config in some other time yeah
+2831640	2831720	okay you created a config in some other time yeah um
+2831720	2845880	this is going to start you know the db analyze once you get the request
+2848600	2852760	can you check if you got the request id from the cell analyze you kicked off
+2852760	2862520	but
+2862520	2867320	we have the you know the cell analyze running on this so this is what we thought right
+2868600	2873320	oh yeah yeah so can we check the status yes yeah i'll take in another
+2876120	2881800	no in this session only you can check no uh no because we have started another one right
+2882600	2882680	okay
+2882760	2890440	okay
+2899960	2903320	i'm asking about that cell analytics which you picked up you're checking that one
+2903880	2904060	yeah
+2907320	2912360	yeah yes now it's uh you know it's showing still and running it will take maybe four
+2912360	2912600	five
+2912600	2912740	months
+2912760	2919640	but we see here everything we are seeing succeeded yeah so it's working on you know the final text
+2919640	2926400	maybe uh but this is pretty clean now so only changes you'll see here the completed succeeded
+2926400	2935180	no errors so these checks also run into three uh stages one is custom pre-checks another is
+2935180	2941480	pre-checks and then after it is done it will do a cleanup or whatever things they have created as
+2941480	2947700	you can see that it's all succeeded if at some stage it fails it then we will let know that
+2947700	2954440	what what stage it got failed yeah then we can go the log files alert ot logs and all those
+2954440	2960820	so we we have got you know the db analyze request now here so this is how it looks like
+2960820	2967280	this is after we analyze this is how we get this request
+2967280	2971420	then we can check the status
+2971480	2978360	so once we get the request id like uh similarly uh we can take that status but as this is very
+2978360	2984600	we have to give at least four five minutes to get to know the actual status but again similar way
+2984600	2991480	we can you know suggest it see here we have seen the running in this cell so but again once time
+2991480	2998120	passes it will create a table uh like view for the db node and it will not have the cell information
+2998120	3000600	but they'll uh db node information we'll see
+3001480	3003480	okay
+3004920	3013800	hey abby menu yeah uh if the cluster have only two uh db nodes so we can only run the one at a time
+3014440	3022200	isn't it that great for cells for db nodes we will put both the nodes that's what i think
+3024520	3031480	uh because from one of the because you um okay there's no uh db not one and maybe not two you're
+3031480	3036760	you need to upgrade if you need to upgrade you need to upgrade the db knock two from db not one
+3036760	3044280	isn't it uh yeah that will take care of it how it's gonna run that zdt will take care of it but
+3044280	3050440	our target is to upgrade both the nodes at the same time yeah at the same not at the same time
+3050440	3056280	it will be done in rolling fashion but uh okay running only one time command it will upgrade
+3057320	3060360	one issue one command to do both okay okay yes
+3061480	3068200	one of the documents you said is uh uh you upgrade uh look two from db not one and then
+3068200	3072600	and also the other way around as well you want to upgrade that is manual method that is manual
+3073400	3080280	oh okay so we don't have to now bother about you know uh like uh once one node is finished
+3080280	3084200	then we'll run from this you know the second node so it will automatically pick it up
+3088280	3091400	yeah it will bring down the instances it will check the db
+3091480	3096280	training and all that stuff it will then bring down those instances and then it will start the
+3096280	3102440	upgrade bring up the db node start the instances then go to second node bring down the services
+3102440	3106840	start the upgrade and bring it up and do the health checks that's everything is taken care by
+3106840	3116120	this okay oh that's good okay so i have a previous job id uh which we used for the db node grade
+3116120	3121320	basically but just to give you the overview how it looks like when we see the progress
+3122280	3130040	so coming from here uh it will give you the log file path request id when it has been started
+3130040	3137320	uh it does have in time as well and the total time how much time it took so patrick uh if you
+3138440	3143800	you know want to know for the db node how much it took time for this two node cluster it took
+3143800	3149800	around five hours for this case this is for upgrade or this is for analyze this is for the upgrade
+3151480	3157560	that's why i was wondering with analyze two five and a half uh no no so this is a puppy when you
+3157560	3164120	say five hours is uh you know um both for both both notes or one note yes both okay all right
+3164120	3169000	cool i think last time it used to be about six hours right yeah in the table you can see that
+3169000	3176200	both nodes are listed in the name to a cfcld zero zero two one one then cfcld zero zero two two all
+3176200	3180840	succeed so so basically uh just to give a overview uh
+3182280	3187080	during the upgrade also it does the pretext that's how you see here the custom pretext
+3187080	3195320	it says 60 days then it should have been in the order i guess uh but yeah it does the pretext okay
+3196840	3203000	then it does the gi pretext which is related to you know the board and instances then it does the
+3203000	3210680	cleanup the actual upgrade in that stage it will check the gi versions and other things uh under
+3212440	3217400	to answer your question okay okay and then it does the custom post text
+3217960	3225400	like everything is upgraded successfully so this is how uh it looks like uh
+3227240	3230360	and the only difference for the analysis which i'll show you in a few minutes
+3230360	3234520	let's you know that let the progress happen for the previous job
+3234520	3239800	so you will not see these things to the post you know the upgrade and the custom postage
+3241800	3255000	so let me see if that's okay okay okay yeah it has started uh you see here it says the custom
+3255000	3262040	feature it succeeded then it has started the cleanup and then it will go to the next step
+3262040	3270680	which is like the pretext uh okay so this is how come the upgrade for the first one is zero
+3271800	3280040	minute zero second for the trend 21. you mean this one up a little bit um
+3280840	3284520	move up a little bit there's uh there's a slap uh last time right
+3286440	3289640	yeah that's the upgrade on the first line is the upgrade is zero
+3291640	3300680	for 21. oh you mean this one yeah that's uh no move down a little bit to upgrade
+3301480	3307160	is zero okay i think that's the one okay i think this note was uh
+3308680	3313640	uh you know already upgraded uh that's that's the reason it's showing you
+3315640	3319000	yeah this is why i decided to skip it okay that's why you were saying
+3321640	3321880	okay
+3323080	3326600	let's start doesn't like uh add up five hours isn't it
+3328440	3331400	oh pretty much okay including you know the service page
+3331480	3357720	there are pretty many push notes you can do in the broad deve elf
+3357720	3359480	in the their list list
+3359480	3360540	right
+3360540	3366400	one probably one was on children exit yeah Patrick the thing is that we
+3366400	3372120	started on Monday or Tuesday all right right maybe this cluster got
+3372120	3377340	failed after upgrading one node and then ratio fixed and then we kicked off again
+3377340	3389680	so again so there's no problem for child X and I dot do dot X to coexist yeah it
+3389680	3395500	should not run for I mean for weeks or something but yeah so far we haven't
+3395500	3398340	seen any issues
+3407160	3412980	the elapsed time here for the different sections you know does not add up to the
+3412980	3416120	five hours right in total
+3419680	3424880	I have not manually calculated this but yes it adds the last time because we see
+3424880	3428660	here they start time and the in time I think this is the difference of the
+3428660	3435200	elapsed time because I'm seeing it around the three and a four hours but
+3435200	3449060	yeah maybe you can check later yeah I can take that okay okay so now the we
+3449060	3449480	have seen the analysis of the elapsed time we have seen the analysis of the
+3449480	3449500	the elapsed time we have seen the analysis of the elapsed time we have seen the analysis of the
+3449500	3454220	analyze partial right so this is how it looks like the custom pre text and the
+3454220	3458840	cleanup and for the both notes it will so on so here see the cleanup also done
+3458840	3464880	succeeded now it has moved to the next three takes it was here right in the
+3464880	3469160	clean up is started next you see the cleanup has been succeeded next three
+3469160	3473760	takes exactly so this is how it will happen for another node once the second
+3473760	3479300	node is done this is how the analyze will happen okay for the upgrade the
+3479300	3486020	the similar way only difference is uh here we will not use you know the
+3486020	3490180	analyze method and analyze flag we will remove this
+3490180	3496500	one yes same like uh for cells
+3497060	3501540	so this is what the difference uh and uh for the analyze and the dd9 is
+3501540	3505300	well and previously i was showing you how the excel upgrades was you know
+3505300	3507380	look like so we have seen the additional things
+3507380	3510740	upgraded and the system was
+3511140	3514820	okay any questions so far please
+3519540	3525380	okay fine uh hey um
+3526100	3529940	no i i i wanted to raise a different question not really
+3529940	3535060	relating to you know this zbt upgrade process right but you know
+3535060	3538500	i i think the one of the reason namachi's on this call is you know
+3538500	3541540	basically you know i i don't know whether you saw
+3541540	3546020	the email um that um we sent you know last night
+3546020	3549380	right but basically we will trying to work with raja and
+3549380	3553780	namachi right to look at the the em volume alert and where we can
+3553780	3558900	reduce right and we found out that there are two you know uh em alert one
+3558900	3562820	is basically far system space alert right and the
+3562820	3564900	other one is ntp
+3565060	3568500	you know sync alert and we noticed that you know um
+3568500	3572660	we're getting about four to five thousand right um
+3572660	3575860	yeah we've been completely aware of that issue for ntp
+3575860	3579060	reason being that ntp service has changed to
+3579060	3582420	you know well seven from ntp no no that yeah
+3582420	3586260	there is one issue but i think uh you know before this upgrade right
+3586260	3590820	in the past three months we also do see you know ntp singular which
+3590820	3594900	which comes and then they auto close right after the work you know so
+3594900	3597780	so that there are two issues as far as ntp right one is the one that you talk
+3597780	3600100	about just now right but the other one is that you know
+3600100	3604260	during the exact vt upgrade or db node upgrade right there are two things you
+3604260	3608340	observe one is you know the the far system space alert
+3608340	3612420	right and the other one is the ntp sync alert right with the older version
+3612420	3615060	where it comes and they auto close right so
+3615060	3619460	question right really is that um is there any blackout set up for
+3619460	3624740	not alerting for these two areas okay there are two things to this
+3624900	3628580	one one is yes the blackouts are set as part of
+3628580	3633780	the upgrade process of analyze only when we kick off the upgrade the blackout
+3633780	3638500	is set by the zdt tool itself but at this time those blackouts are not
+3638500	3641380	working as expected that is already been raised to the
+3641380	3643780	gdt team and they are working on that one
+3643780	3647620	they probably put some work around into it somewhere it's i think
+3647620	3651140	uh working maybe somewhere it's not working
+3651140	3654820	this was so they're still checking on that is still work in progress
+3654900	3660500	second thing on the ntp thing the ntp the thing is that after the upgrade is
+3660500	3662900	done and then blackouts got removed
+3662900	3666500	automatically then it will throw the error of ntp if
+3666500	3671620	it is not in sync now at this time it will even if it is
+3671620	3676020	in sync it will still throw the error because the service's name is changed
+3676020	3680420	that is already been worked out by em team they are going to implement the
+3680420	3684900	feature today i think uh yes i i think that the second issue i'm aware because
+3684900	3686820	you know uh those
+3686820	3690980	those uh esr is not close right because of the
+3690980	3695700	problem with the new version right so those i know and and i know the em has a
+3695700	3700260	bug to resolve this right but the other two right you know um
+3700260	3704340	you know because we can during the upgrade i don't think we get any issues
+3704340	3708580	during the upgrade for ntp because if blackout is in place so that is being
+3708580	3712100	worked on another thing is the file system issue there again there are two
+3712100	3714900	things to it if it is in blackout we won't get the issue
+3714900	3717940	issues but if the blackout is not working
+3717940	3721860	so then we will get the alerts for the file system ones so so
+3721860	3725940	so maybe i suggest this right down to discuss this on on this call with so many
+3725940	3729860	people maybe you know namachi and and rb right um
+3729860	3733780	you know can sync up on you know those alerts that we saw right uh
+3733780	3738420	you mentioned that you know the zbt is working on the blackout to resolve the
+3738420	3744900	blackout issue yeah yeah okay so once we get from them that okay now the the
+3744900	3748660	it's fixed and we also see that okay we are not getting any alerts because we
+3748660	3752500	are getting unreachable alerts also even the database team are getting their
+3752500	3756180	their alerts as well that instance is down or something
+3756180	3761220	when we are upgrading so that yeah if you are okay right i'll get
+3761220	3765540	namachi to touch base with rb just to make sure that we are on the same page
+3765540	3769700	as far as the right and and if if what you're saying is that if the
+3769700	3774740	blackout works then you know all these alerts should go away right yeah yeah
+3774900	3777940	this time it's work in progress we are aware of this issue with the blackout
+3777940	3782980	thing so i think once we get permission from the
+3782980	3787060	problem is fixed okay okay so other other question
+3787060	3790740	pina case does it does this process
+3790740	3795700	write files to you know say slash or slash where or something yes it does
+3795700	3801140	yeah yeah it does what is the size of those files
+3801140	3804340	i'm not sure of the size of the files but it does the cleanup also after the
+3804340	3809460	updates are done um okay okay
+3809620	3815860	that's why we get done yeah that's right yeah and and that's why if we if we can
+3815860	3819140	get the blackout to work right then at least we'll reduce you know all these
+3819140	3822340	four five thousand alerts you know that we get
+3822340	3825940	but they should have been coming since tuesday only if we are getting
+3825940	3830340	no we uh we analyzed the past three months uh
+3830340	3834100	uh pinaxola i say right there there are three things right one is
+3834100	3837620	far system space alert right uh and then second one is
+3837620	3841460	the older version and tt sync alert right and and those auto clothes right
+3841460	3843860	after the upgrade is done and the third one is
+3843860	3845540	the one that you just described by the new
+3845540	3849380	new version of ol7 right uh that we need to change it to
+3849380	3853540	use the new you know yeah
+3854100	3858580	yeah these alerts should have been coming from 23rd july onwards
+3858580	3863860	yeah if it comes before 23rd july then it's probably some other reason yep yep uh
+3864100	3866900	i i think i i did notice that 23rd you know
+3866900	3870820	onwards right with the new version uh so so yeah uh
+3870820	3874100	namachi if you can sync up with um with rb
+3874100	3877140	just to make sure that we're on the same page for the file system and the mtp
+3877140	3881620	stuff okay this is actually uh running for a
+3881620	3888100	very long days it seems uh um i have seen this mtp sync issue occurs
+3888100	3892020	for a few still a couple of months maybe even six months around
+3892020	3893220	whenever after
+3894100	3897540	they didn't whenever they accidentally know the reboots
+3897540	3901620	were happening six months before namachi so that's what i am trying to say that
+3901620	3906100	if it is happening before these 23rd then it's not due to the grades maybe
+3906100	3911780	some other reasons behind it yeah you know yeah
+3911780	3916980	because we did a lot of those um you know fixes remember the the
+3916980	3920180	vulnerability fixes in the previous couple of months right so
+3920180	3923940	so we did notice right over the three months we have space alert as well
+3923940	3928580	as you know uh mtp so uh let namachi sync up with rb right
+3928580	3932260	we just want to make sure but yeah i mean uh since we are
+3932260	3936820	moving to the other service name and the bug fixes are being applied so probably
+3936820	3940260	it would be best that after the grades we analyze the
+3940260	3943780	data i mean um since we are moving away from the
+3943780	3946100	service name also and fix is being applied
+3946100	3949620	so that would be the ideal way i think to troubleshoot things rather than going
+3949620	3953780	into the past data which we is probably well
+3953940	3957380	we we we just want to make sure we have closure as far as the blackout
+3957380	3961700	uh issue that you guys are working on with uh the sc team right
+3961700	3965060	yeah sure advice this activity process and okay so
+3965060	3969540	so yeah i uh namachi uh if if you can call me later regarding the network
+3969540	3973220	interface stuff you know i um i'll talk to you who
+3973220	3975540	you know we need to reach out to like to look at
+3975540	3983620	the interval if you don't mind sure sure project one question about pinak so the
+3983940	3986500	next round of upgrades for the 600 plus uh
+3986500	3989540	accelerator clusters
+3992020	3996740	and uh was it using the zdt tool or
+3998020	4002020	okay okay and that was in the last four or five months or
+4002020	4005700	what was the time frame i think couple of months back only we did it
+4005700	4007940	uh
+4007940	4011940	yeah so it's uh probably we did in uh april
+4011940	4013940	two three months i think yeah
+4013940	4018740	yeah we did okay i'll find that yeah
+4018740	4020980	maybe
+4020980	4024500	sorry even we can try uh notice from here onwards
+4024500	4028340	at least uh any ntp sync comes after any zdt upgrade we can
+4028340	4032340	have a watch out uh apart from this crony
+4032340	4037140	ol7 leaving that if any other ntp sync if it is coming after this
+4037140	4043780	is it the upgrade kind of we can watch out thanks but however we look thanks
+4043940	4047940	okay i'll just cover a few of the things
+4047940	4054020	post upgrade uh which is uh or the analyzed ones which is
+4054020	4057700	sort of work rounds given to us not a not a
+4057700	4063620	fix i i would say so abhimanyu you can stop your screen and then i'll share my
+4063620	4065940	screen
+4065940	4068940	online
+4068940	4071940	yeah
+4073940	4075940	.
+4075940	4080180	so you guys can see my screen so this is our main conference for x
+4080180	4085060	excited upgrade 1923 upgrade which we are doing so
+4085060	4088580	the way we are moving so in the past we have been
+4088580	4093460	doing upgrades based on colos so the data was
+4093460	4098820	created using colos and then we used to kick off
+4098820	4103940	the upgrades and the regions wise as in the windows as we know that in the
+4103940	4110100	mldc is 19pt and emia once 13pt and apac was 5pd that's how
+4110100	4113620	we were upgrading but this time we are dependent on gi
+4113620	4116820	upgrade gi is one of the components on the database
+4116820	4121220	called grid infrastructure it should be on 12.2 which we have been talking about
+4121220	4128180	before we can upgrade to db nodes to this one and cell nodes from this one
+4128340	4131460	so this was the page for the cell nodes which we did
+4131460	4133700	uh
+4133940	4139380	so to answer your question uh raja we ended on july 7th we
+4139380	4144820	started on may 19th and we ended on july 7th for those cell node upgrades this
+4144820	4150340	was a tracker here and uh so this is the page
+4150340	4154500	now we started with only one slot so far last week
+4154500	4159860	which was this uh slot 104 and which was comprising 40 clusters
+4159860	4163140	this is the page for db nodes and then we are
+4163140	4169540	starting with now slot 101 for another 48 clusters
+4169540	4173700	and analyze is being kicked off for these all clusters
+4173700	4176740	so it's all these slots were made by a provisioning team
+4176740	4180420	based on their plan and then we are just using those
+4180420	4184100	slots for upgrades and same with cell node upgrades
+4184100	4188580	as we fix the the db node upgrades thing then we will move
+4188580	4193140	for the cell nodes now the custom things which i'll like to
+4193140	4198100	discuss on is this mentioned in the common issues
+4198100	4202980	instructions first thing is that as a pre-request
+4202980	4207220	like sp should be more than less than 30 days of uptime
+4207220	4212980	same thing is that the mc version of all accelerator should be on this today
+4212980	4216500	dot eight hyphen two i think is the version
+4216500	4221140	maxim is on two dot seven so we have to upgrade the m collective first
+4221140	4222820	using this script
+4223140	4227460	provided by scotty's team automation team
+4227460	4231140	it will not just upgrade the m collective it will
+4231140	4238500	also upgrade other ruby packages as well now another thing which we are coming
+4238500	4241380	across during analyzed checks is that all analyze
+4241380	4249060	fails stating that we have custom rpms installed on our exa datas custom rpms
+4249060	4252900	are the rpms which are not part of the iso image
+4253140	4257220	exadata those can be our power broker packages
+4257220	4261540	editor packages to name a few some some other exa
+4261540	4266580	aps b apps created the the older aps team created some packages and installed
+4266580	4270420	on the exa datas so those are the things which with rpms
+4270420	4274660	are installed on it now a lot of rpms are whitelisted some
+4274660	4278900	of the rpms we have to remove before analyze can be we can have a
+4278900	4283060	clean and on this so once those packages are removed
+4283140	4289940	then after the upgrade is done we have to install the rpms manually
+4289940	4294660	which is listed in
+4294660	4299140	uh under fs red mean under this directory
+4299140	4303140	now in the first iteration in pilot tests of three four clusters we were
+4303140	4306180	just checking what are those rpms which we
+4306180	4311060	need to install and get and get it posted over here but now this
+4311060	4312820	is the script is created
+4313140	4319460	and it is put as part of the this script is created and given to
+4319460	4324340	uh the zd team and they have been incorporated into the
+4324340	4331380	upgrade process only so we don't need to run any manual rpm installations
+4331380	4335060	but in case some upgrade fails at post upgrade
+4335060	4339780	so this script won't get executed and then we have to
+4339780	4343060	do it manually if you don't run this script
+4343060	4346820	then you won't be able to log in using ldap because with
+4346820	4352180	ol7 ldap config is using
+4352180	4357620	ssd instead of nsd table so this needs to be changed in ldap
+4357620	4361140	config this is for the authentication purposes
+4361140	4365540	then there is another thing which we have to run this is for nproc limits
+4365540	4371940	which we have to run before the upgrade so this is also mentioned then for ntp
+4371940	4372420	alerts
+4373060	4376660	since the em alerts we can't be dependent on the
+4376660	4380820	em because it will fail so there is a script which will check
+4380820	4384820	if there is any time lag or not using the crony service
+4384820	4388740	so these are the main i mean these things which we have to do
+4388740	4394900	after the before or after the updates so as we progress further then that these
+4394900	4398180	tweaks will be put in place in the in the upgrade
+4398180	4402100	process itself automatically purchased to let you know that this is
+4402100	4407220	some of the manual stuff which we are doing at the moment
+4407220	4411300	any any questions uh guys
+4414100	4419220	uh whatever upgrades we are going to update here after all we'll move to ol7
+4419220	4424340	is it happening i'm sorry i didn't get your question
+4424340	4431940	what do you mean by it's here after everything will go to l7 is it yes
+4433060	4439620	okay so this version 19.2.3 is ol7 based version
+4439620	4441860	okay
+4443620	4447140	okay once we are done with the image upgrade then the database team will be
+4447140	4452340	upgrading the databases to 19c that's the target
+4453460	4458420	okay so other things are this conference of what abhimanyu was showing that sop
+4458420	4461940	we will be publishing that sop through through this page only we will be
+4461940	4464820	going out to this page which is very likely oh i許le in the background
+4464820	4477620	but in this case
+4479300	4485940	see
+4487940	4489940	and
+4489940	4490820	so
+4490820	4495460	access to the servers they do their issues and then they go to a city on
+4495460	4507860	that so connect those guys are 24 by 7 right yeah yeah okay so any question
+4507860	4520740	guys so we will i think uh you guys can you start yeah go ahead can i share that how we can
+4527140	4530020	i'm sorry say again start upgrade using those
+4533300	4537780	ah the script one yeah you can show the script so the guys the to make things easier
+4537860	4542340	or whatever config files are being created in other steps abhimanyu has created the script
+4542340	4549220	for both analyze and upgrade both cell and database so you can uh show the script also
+4553380	4560820	so what script will do is it will create the config files in the directory automatically
+4560820	4565700	it will kick off the analyze also it will show the command which is to be there for monitoring
+4565700	4566820	purposes and everything
+4567860	4572660	just have to copy and paste the command and then you will be able to all second monitor
+4575060	4581780	even that all pod info that stuff also will be taken care by the script yeah so
+4584580	4591460	okay so what you need to do is we just need to prepare you know our which host we are going
+4591460	4597380	to upgrade so i just know uh the script was created for the cell and the db both uh but for
+4597860	4608100	then the db uh you know so one more question sorry this is a slash file system for actually
+4608100	4614900	a b or somebody uh any possibility which fills uh kind of during upgrade uh which caused this
+4614900	4621940	slash file system phone take it offline yeah sure to get the info it's fine yeah thanks
+4623140	4623540	thank you
+4625540	4626500	so for this uh
+4628020	4634580	this is a strip location in chicago and it will be you know everywhere in the same location so
+4634580	4640020	i'm just running it without any flags so it will just give you the idea what what what flag we can
+4640020	4647380	use it so basically for the analyte just use hyphen a or uh hyphen hyphen analyte and for the
+4647380	4655940	grade hyphen so you or hyphen hyphen upgrade we can also monitor the you know our request id like
+4655940	4657780	you know ever we used to do them manually
+4657860	4663300	but using uh this is we can monitor you know multiple jobs together as well
+4664580	4672500	okay so as pinag was saying uh this will create the configuration file you know then use those
+4672500	4678900	configuration files for the upgrades and initiate the upgrade and it will give you the request id
+4678900	4687380	for the each cluster and for the db node it will also add the as called the info entry automatically
+4688660	4693780	okay so i have one cluster uh for the analyze i'll just use it
+4696420	4701780	and you know this will automatically create uh the directory based on your uid
+4701780	4708180	and the date okay so if you're doing something else you'll see here your uid and the today's date
+4708180	4715140	okay uh i have a database node here 95 and 96.
+4716260	4717700	uh so you're just
+4717860	4721460	putting comma separators value uh i mean just the thought name
+4722980	4724900	we don't need to put here the fqdn
+4726980	4732100	okay if you have you know the second set of cluster you can put in the next line and so
+4732100	4737620	so like that it will work on so but always uh please put you know one cluster in one line itself
+4737620	4745220	otherwise it will not it will be a problem okay just to save the data just pressing on the ctrl d
+4746020	4747780	uh it will show you uh you know
+4747860	4753540	you have put your primary node is this and secondary node is this okay then it will also
+4753540	4759460	tell you you know for which version this upgrade or analyze is going to happen okay so as we have
+4759460	4764500	started for the analyze it is asking for the you know the confirmation if you feel you know
+4764500	4770420	something is went wrong or you have entered somehow the wrong hosting just enter n okay
+4770420	4777380	so it will not move on so i'm not i'm just using here the yes giving the indication to go ahead uh
+4778340	4785460	and see here now it has started updating the all pod info for this cluster
+4786580	4792900	suppose we have multiple cluster it will do for the multiple servers okay now it is showing us
+4792900	4798980	like the db node analyze command so the primary node is this it has automatically formed the
+4798980	4806500	command and it is now initiating uh running the command for the analyze and we see here the analyze
+4807860	4812580	all the configuration files i'll show you whether where it has been you know created
+4812580	4816820	this process will go on but meanwhile let me show you the configuration file it has created
+4822420	4827460	see here this has automatically created the configuration file we just had to put the host
+4827460	4836100	name and i'll go to this directory and it will have some more details uh which i'll just succeed
+4836100	4848340	okay so basically we see uh our host uh 95 uh it is the configuration file is created
+4850020	4855220	then we are seeing you know uh the command which is basically we saw here on the
+4855220	4858260	screen this will also list out here uh
+4862420	4865860	so we can see here uh it has not you know updated
+4866100	4869700	the reason is uh the process is not finished here yet but it will come up
+4871060	4878020	so once it's finished uh we will see and we will see we are seeing here the different files created
+4878020	4881700	like the this this file will have all the deep analyze dd commands
+4882740	4886180	this file will have all you know the request id for each cluster
+4889140	4895220	yes for the previous one it is there the new one will be updated as well then
+4896500	4900740	let's consider we are you know running the upgrade also we will see here the upgrade
+4900740	4908100	command and the upgrade request id we will also see uh what all nodes what nodes we have entered
+4908100	4911860	so it will you know automatically form the student for that
+4914580	4921860	okay i think this is finished here so here you see uh uh this is for the previous job id okay
+4921860	4926020	so not to bother about this because uh we are using the same directory so we used to
+4926020	4931460	use the same directory for the previous job id so it is just showing you the this job was also
+4931460	4937060	run today but we entered here the 95 post so for that we have got the request id automatically
+4938580	4944340	and uh these things will you know tell us uh what our the logs which i was talking here right so
+4944340	4950340	these files part and location what is there okay so let's consider our analyze this you know
+4950340	4954260	started now if i have to monitor it okay so just use iphone m
+4954260	4955940	i'm just monitoring the previous one
+4956260	4961860	uh i think that was for the okay let's monitor this one
+4964420	4969860	just give the request id if you want to give them you know the other request id again just give it
+4970660	4977220	and control d uh it will show you you know the job id which you have mentioned it will save it here
+4977940	4985140	okay and you see here so for the 95 one this has started and it is still running the previous one
+4985140	4985940	which i started
+4986260	4990660	which that also i wanted to monitor now and that is showing you know the completed
+4990660	4996420	activity so basically it will give you the start information whether you know job is actually
+4996420	5002020	completed or free if it is failed then you can have a you know the actual progress report and see
+5002020	5010260	and in the logs directly like how it is done so this is how it is uh and for the upgrade
+5010260	5013860	uh it will be again just uh hyphen new option that's it
+5016260	5017700	so any questions for this
+5025300	5031620	yeah we have created a conference also to use the script so the guys can go through that and
+5032740	5037460	probably run this script when they are running an analyze for cells or dvs
+5040100	5043140	so you don't have to do manually create the configuration file
+5044260	5045380	so
+5045380	5048620	we just plug it into your directory and it will show you the
+5048620	5060560	equivalent of killing and the
+5060560	5067020	table image value frame okay so everyone you can send out the confidence pages for
+5067020	5070500	to the team over part of this invite and they can go through that
+5070500	5073040	yeah i'll do it and the hoop also
+5073040	5078980	finalized people are still checking if there are any tweaks to be done so we
+5078980	5082040	will publish in the same conference which I was showing you the our master
+5082040	5092120	conference for the page if no questions I think we can wrap it up and guys can
+5092120	5098600	you can bring up even new Rishi Kant or more if you have any queries or current
+5098600	5108840	also great session I'll be when you and Pinnock thanks for that very useful
+5112840	5115940	thank you
+5119140	5122760	yeah thanks my
